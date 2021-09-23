@@ -1,0 +1,93 @@
+<!--Name: Ryan Griffin
+Date: 6/7/21-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio - Resume</title>
+    <meta name="viewport" content="width=device-width, intital-scale=1.0">
+    <link rel="icon" href="Favicon.png">
+    <link href="Style.css" rel="stylesheet">
+
+    <style>
+      /* Image of resume */
+      .resume {
+        width: 50%;
+        margin: 2vw auto 2vw auto;
+      }
+
+      /* Download button section for resume */
+      .download {
+        text-align: center;
+      }
+
+      /* Download button image for resume */
+      .download a img {
+        width: 50px;
+        border-radius: 999px;
+      }
+
+      /* Download for resume hover */
+      .download a img:hover {
+        transform: scale(1.03);
+        transition-duration: 0.1s;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.20);
+      }
+
+      /* Download for resume active */
+      .download a img:active {
+        transform: scale(0.98);
+        transition-duration: 0.1s;
+        box-shadow: none;
+      }
+
+      @media only screen and (max-width: 1000px) {
+        /* Image of resume */
+        .resume {
+          width: 70%;
+        }
+      }
+
+      @media only screen and (max-width: 650px) {
+        /* Image of resume */
+        .resume {
+          width: auto;
+          margin: 2vw;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <a href="Portfolio-About.html">About</a>
+      <a href="Portfolio-Projects.html">Projects</a>
+      <a href="Portfolio-Certifications.html">Certifications</a>
+      <a class="active" href="Portfolio-Resume.html">Resume</a>
+      <a href="Portfolio-Contact.html">Contact</a>
+    </div>
+
+    <div class="bannerimage">
+      <div class="bannertext">
+        <h1>Resume</h1>
+      </div>
+    </div>
+
+    <div class="resume"><img src="Resume.jpg" style="width: 100%;border-radius: 20px;box-shadow: var(--boxshadow);"></div>
+
+    <div class="download">
+      <a href="Resume.pdf" target="_blank"><img src="Downloadicon.jpg"></a>
+    </div>
+
+    <footer style="margin-top: 2vw;">
+      <div class="contact-container">
+        <a class="email" href="mailto:ryangriffin2023@student.assabet.org" target="_blank"><img src="Emailicon.jpg"></a>
+        <a class="twitter" href="https://twitter.com/ryan_griffin45" target="_blank"><img src="Twittericon.jpg"></a>
+        <a class="instagram" href="https://www.instagram.com/ryan_griffin45/" target="_blank"><img src="Instagramicon.jpg"></a>
+        <a class="discord" href="https://discordapp.com/users/6043/" target="_blank"><img src="Discordicon.jpg"></a>
+        <a class="github" href="https://github.com/ryan-griffin" target="_blank"><img src="Githubicon.jpg"></a>
+        <a class="credly" href="https://www.credly.com/users/ryan-griffin.f79cdd37" target="_blank"><img src="Credlyicon.jpg"></a>
+      </div>
+      <p>Resources: <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>, <a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>, <a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></p>
+    </footer>
+  </body>
+</html>

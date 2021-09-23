@@ -1,0 +1,138 @@
+<!--Name: Ryan Griffin
+Date: 6/7/21-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio - Contact</title>
+    <meta name="viewport" content="width=device-width, intital-scale=1.0">
+    <link rel="icon" href="Favicon.png">
+    <link href="Style.css" rel="stylesheet">
+
+    <style>
+      /* Layout */
+      .grid-container {
+        display: grid;
+        grid-template-areas: '. . .' ;
+        row-gap: 5vw;
+        margin: 5vw;
+        justify-content: center;
+      }
+
+      /* Contact methods item */
+      .item {
+        text-align: center;
+        word-wrap: break-word;
+        font-size: 20px;
+        width: 25vw;
+      }
+
+      /* Image links to contact */
+      .grid-container a img {
+        width: 9vw;
+        border-radius: 999px;
+      }
+
+      /* Image link hover */
+      .grid-container a img:hover {
+        transform: scale(1.01);
+        transition-duration: 0.1s;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.20);
+      }
+
+      .grid-container a img:active {
+        transform: scale(0.985);
+        transition-duration: 0.1s;
+        box-shadow: none;
+      }
+
+      /* Contact username */
+      .grid-container h3 {
+        padding-top: 15px;
+      }
+
+      @media only screen and (max-width: 1000px) {
+        /* Layout */
+        .grid-container {
+          grid-template-areas: '. .' ;
+        }
+
+        /* Contact methods */
+        .item {
+          width: 40vw;
+        }
+
+        /* Image links to contact */
+        .grid-container a img {
+          width: 15vw;
+        }
+      }
+
+      @media only screen and (max-width: 650px) {
+        /* Layout */
+        .grid-container {
+          grid-template-areas: '.' ;
+          row-gap: 8vw;
+        }
+
+        /* Contact methods */
+        .item {
+          width: 100%;
+          font-size: 16px;
+        }
+
+        /* Image links to contact */
+        .grid-container a img {
+          width: 24vw;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <a href="Portfolio-About.html">About</a>
+      <a href="Portfolio-Projects.html">Projects</a>
+      <a href="Portfolio-Certifications.html">Certifications</a>
+      <a href="Portfolio-Resume.html">Resume</a>
+      <a class="active" href="Portfolio-Contact.html">Contact</a>
+    </div>
+
+    <div class="bannerimage">
+      <div class="bannertext">
+        <h1>Contact</h1>
+      </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="item">
+        <a href="mailto:ryangriffin2023@student.assabet.org" target="_blank"><img src="Emailicon.jpg"></a>
+        <h3>ryangriffin2023@student.assabet.org</h3>
+      </div>
+
+      <div class="item">
+        <a href="https://twitter.com/ryan_griffin45" target="_blank"><img src="Twittericon.jpg"></a>
+        <h3>@ryan_griffin45</h3>
+      </div>
+
+      <div class="item">
+        <a href="https://www.instagram.com/ryan_griffin45/" target="_blank"><img src="Instagramicon.jpg"></a>
+        <h3>@ryan_griffin45</h3>
+      </div>
+
+      <div class="item">
+        <a href="https://discordapp.com/users/6043/" target="_blank"><img src="Discordicon.jpg"></a>
+        <h3>Shardic #6043</h3>
+      </div>
+
+      <div class="item">
+        <a href="https://github.com/ryan-griffin" target="_blank"><img src="Githubicon.jpg"></a>
+        <h3>ryan-griffin</h3>
+      </div>
+
+      <div class="item">
+        <a href="https://www.credly.com/users/ryan-griffin.f79cdd37" target="_blank"><img src="Credlyicon.jpg"></a>
+        <h3>Ryan Griffin</h3>
+      </div>
+    </div>
+  </body>
+</html>
