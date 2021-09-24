@@ -9,51 +9,37 @@ Date: 6/7/21-->
 		<link href="Style.css" rel="stylesheet">
 
 		<style>
-	  		/* Image of resume */
-	  		.resume {
-				width: 50%;
+			/*resume*/
+			iframe {
+				display: flex;
+				width: 40%;
+				height: 100%;
 				margin: 2vw auto 2vw auto;
-	  		}
-
-	  		/* Download button section for resume */
-	  		.download {
-				text-align: center;
-	 	 	}
-
-	  		/* Download button image for resume */
-	  		.download a img {
-				width: 50px;
-				border-radius: 999px;
+				border: none;
+				border-radius: 20px;
+				box-shadow: var(--boxshadow);
 			}
 
-	  		/* Download for resume hover */
-	  		.download a img:hover {
-				transform: scale(1.03);
-				transition-duration: 0.1s;
-				box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.20);
-	  		}
-
-	  		/* Download for resume active */
-	  		.download a img:active {
-				transform: scale(0.98);
-				transition-duration: 0.1s;
-				box-shadow: none;
-	  		}
-
-	  		@media only screen and (max-width: 1000px) {
-				/* Image of resume */
-				.resume {
-		  			width: 70%;
+			@media only screen and (max-width: 1500px) {
+				/*resume*/
+				iframe {
+					width: 60%;
 				}
-	  		}
+			}
 
-	  		@media only screen and (max-width: 650px) {
-				/* Image of resume */
-				.resume {
-		  			width: auto;
-		  			margin: 2vw;
+			@media only screen and (max-width: 1100px) {
+				/*resume*/
+				iframe {
+					width: 80%;
 				}
-	  		}
+			}
+
+			@media only screen and (max-width: 650px) {
+				/*resume*/
+				iframe {
+					width: 95%;
+				}
+			}
 		</style>
   	</head>
 
@@ -72,15 +58,11 @@ Date: 6/7/21-->
 	  		</div>
 		</div>
 
-		<div class="resume"><img src="resume.jpg" style="width: 100%;border-radius: 20px;box-shadow: var(--boxshadow);"></div>
-
-		<div class="download">
-	  		<a href="resume.pdf" target="_blank"><img src="download_icon.jpg"></a>
-		</div>
+		<iframe src="https://docs.google.com/document/d/e/2PACX-1vShQkJjl8XQsh4geupPyB3EBvzNOJOf16HbY7rLpAQ7PfEQ2dM2GlZHevEa2ew_NRAX5HxfFr7a3M6T/pub?embedded=true"></iframe>
 
 		<footer style="margin-top: 2vw;">
 	  		<div class="contact-container">
-				<a class="email" href="mailto:ryangriffin2023@student.assabet.org" target="_blank"><img src="email_icon.jpg"></a>
+				<a class="email" href="mailto:ryangrif875@gmail.com" target="_blank"><img src="email_icon.jpg"></a>
 				<a class="twitter" href="https://twitter.com/ryan_griffin45" target="_blank"><img src="twitter_icon.jpg"></a>
 				<a class="instagram" href="https://www.instagram.com/ryan_griffin45/" target="_blank"><img src="instagram_icon.jpg"></a>
 				<a class="discord" href="https://discordapp.com/users/6043/" target="_blank"><img src="discord_icon.jpg"></a>
