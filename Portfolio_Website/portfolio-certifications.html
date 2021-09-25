@@ -1,0 +1,170 @@
+<!--Name: Ryan Griffin
+Date: 6/7/21-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Portfolio - Certifications</title>
+		<meta name="viewport" content="width=device-width, intital-scale=1.0">
+		<link rel="icon" href="favicon.png">
+		<link href="Style.css" rel="stylesheet">
+		<script src="javascript.js"></script>
+	
+		<style>
+		  	/* Layout */
+		  	.grid-container {
+				display: grid;
+				grid-template-columns: 80%;
+				margin: 2vw;
+				grid-gap: 2vw;
+				justify-content: center;
+		  	}
+
+			/* Box */
+			.certification {
+				display: flex;
+				align-items: center;
+				padding: clamp(15px, 2vw, 30px);
+				border-radius: 20px;
+				height: 200px;
+				background-color: var(--boxcolor);
+				box-shadow: var(--boxshadow);
+	  		}
+
+			/* logos */
+	  		.certification img {
+				border-radius: 999px;
+				height: 100%;
+	  		}
+
+	  		/* Titles */
+	  		.certification h1 {
+				font-size: 35px;
+				white-space: nowrap;
+				padding: 0 30px 0 30px;
+	  		}
+
+	  		/* Description of certification */
+	  		.description {
+				font-size: 18px;
+				line-height: 1.4;
+				padding-left: 30px;
+	  		}
+
+	  		/* divider for title and description */
+	  		.line {
+				border-left: 1px solid grey;
+				height: 100%;
+	  		}
+
+	  		@media only screen and (max-width: 1650px) {
+				/* Layout */
+				.grid-container {
+		  			grid-template-columns: 90%;
+				}
+	  		}
+
+	  		@media only screen and (max-width: 1500px) {
+				/* Layout */
+				.grid-container {
+		  			grid-template-columns: 50% auto;
+				}
+
+				/* Box */
+				.certification {
+		  			flex-direction: column;
+		  			height: auto;
+		  			text-align: center;
+				}
+
+				/* logos */
+				.certification img {
+		  			height: 140px;
+				}
+
+				/* Titles */
+				.certification h1 {
+		  			white-space: normal;
+		  			padding: 20px;
+				}
+
+				/* Description of certification */
+				.description {
+		  			padding: 0px;
+				}
+
+				/* divider for title and description */
+				.line {
+		  			display: none;
+				}
+	  		}
+
+	  		@media only screen and (max-width: 650px) {
+				/* Layout */
+				.grid-container {
+		  			grid-template-columns: 100%;
+				}
+	  		}
+		</style>
+  	</head>
+
+  	<body class="dark_theme">
+		<div class="nav">
+	  		<a href="index.html">About</a>
+	  		<a href="portfolio-projects.html">Projects</a>
+	  		<a class="active" href="portfolio-certifications.html">Certifications</a>
+	  		<a href="portfolio-resume.html">Resume</a>
+	  		<a href="portfolio-contact.html">Contact</a>
+			<button onclick="theme()"></button>
+		</div>
+
+		<div class="bannerimage">
+	  		<div class="bannertext">
+				<h1>Certifications</h1>
+	  		</div>
+		</div>
+
+		<div class="grid-container">
+	  		<div class="certification">
+				<img src="osha_logo.jpg">
+
+				<h1>Osha Certification</h1>
+
+				<div class="line"></div>
+
+				<p class="description">The OSHA Outreach Training Program for General Industry provides training for entry-level workers and employers on the recognition, avoidance, abatement, and prevention of safety and health hazards in workplaces in general industry. The program also provides information regarding workers' rights, employer responsibilities, and how to file a complaint.</p>
+	  		</div>
+
+	  		<div class="certification">
+				<img src="google_cert_badge.jpg">
+
+				<h1>Google IT Certification</h1>
+
+				<div class="line"></div>
+
+				<p class="description">The Google IT Support Certificate introduces learners to troubleshooting, customer service, networking, operating systems, system administration and security. This certificate is for beginners - no prior experience is required. The Google IT Support Certificate is designed to prepare learners for entry-level roles in IT support. Those who complete are competent in foundational skills, including troubleshooting, customer service, networking, operating systems, system administration, and security.</p>
+	  		</div>
+
+	  		<div class="certification">
+				<img src="career_essentials.jpg">
+
+				<h1>Fundamental Micro-Credential</h1>
+
+				<div class="line"></div>
+
+				<p class="description">The SkillsUSA Career Essentials curriculum and credential program provide career and technical education students with the foundational skills, attitudes and values necessary to ensure America has the skilled workforce it needs to stay competitive on a global scale.</p>
+			</div>
+		</div>
+
+		<footer>
+	  		<div class="contact-container">
+				<a class="email" href="mailto:ryangrif875@gmail.com" target="_blank"><img src="email_icon.jpg"></a>
+				<a class="twitter" href="https://twitter.com/ryan_griffin45" target="_blank"><img src="twitter_icon.jpg"></a>
+				<a class="instagram" href="https://www.instagram.com/ryan_griffin45/" target="_blank"><img src="instagram_icon.jpg"></a>
+				<a class="discord" href="https://discordapp.com/users/6043/" target="_blank"><img src="discord_icon.jpg"></a>
+				<a class="github" href="https://github.com/ryan-griffin" target="_blank"><img src="github_icon.jpg"></a>
+				<a class="credly" href="https://www.credly.com/users/ryan-griffin.f79cdd37" target="_blank"><img src="credly_icon.jpg"></a>
+	  		</div>
+	  		<p>Resources: <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>, <a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>, <a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></p>
+		</footer>
+  	</body>
+</html>

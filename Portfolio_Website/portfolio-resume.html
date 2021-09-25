@@ -1,0 +1,77 @@
+<!--Name: Ryan Griffin
+Date: 6/7/21-->
+<!DOCTYPE html>
+<html>
+  	<head>
+		<title>Portfolio - Resume</title>
+		<meta name="viewport" content="width=device-width, intital-scale=1.0">
+		<link rel="icon" href="favicon.png">
+		<link href="Style.css" rel="stylesheet">
+		<script src="javascript.js"></script>
+
+		<style>
+			/*resume*/
+			iframe {
+				display: flex;
+				width: 40%;
+				height: 100%;
+				margin: 2vw auto 2vw auto;
+				border: none;
+				border-radius: 20px;
+				box-shadow: var(--boxshadow);
+			}
+
+			@media only screen and (max-width: 1500px) {
+				/*resume*/
+				iframe {
+					width: 60%;
+				}
+			}
+
+			@media only screen and (max-width: 1100px) {
+				/*resume*/
+				iframe {
+					width: 80%;
+				}
+			}
+
+			@media only screen and (max-width: 650px) {
+				/*resume*/
+				iframe {
+					width: 95%;
+				}
+			}
+		</style>
+  	</head>
+
+	<body class="dark_theme">
+		<div class="nav">
+	  		<a href="index.html">About</a>
+	  		<a href="portfolio-projects.html">Projects</a>
+	  		<a href="portfolio-certifications.html">Certifications</a>
+	  		<a class="active" href="portfolio-resume.html">Resume</a>
+	  		<a href="portfolio-contact.html">Contact</a>
+			<button onclick="theme()"></button>
+		</div>
+
+		<div class="bannerimage">
+	  		<div class="bannertext">
+				<h1>Resume</h1>
+	  		</div>
+		</div>
+
+		<iframe scrolling='no' src="https://docs.google.com/document/d/e/2PACX-1vShQkJjl8XQsh4geupPyB3EBvzNOJOf16HbY7rLpAQ7PfEQ2dM2GlZHevEa2ew_NRAX5HxfFr7a3M6T/pub?embedded=true"></iframe>
+
+		<footer style="margin-top: 2vw;">
+	  		<div class="contact-container">
+				<a class="email" href="mailto:ryangrif875@gmail.com" target="_blank"><img src="email_icon.jpg"></a>
+				<a class="twitter" href="https://twitter.com/ryan_griffin45" target="_blank"><img src="twitter_icon.jpg"></a>
+				<a class="instagram" href="https://www.instagram.com/ryan_griffin45/" target="_blank"><img src="instagram_icon.jpg"></a>
+				<a class="discord" href="https://discordapp.com/users/6043/" target="_blank"><img src="discord_icon.jpg"></a>
+				<a class="github" href="https://github.com/ryan-griffin" target="_blank"><img src="github_icon.jpg"></a>
+				<a class="credly" href="https://www.credly.com/users/ryan-griffin.f79cdd37" target="_blank"><img src="credly_icon.jpg"></a>
+	  		</div>
+	  		<p>Resources: <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>, <a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>, <a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></p>
+		</footer>
+  	</body>
+</html>
