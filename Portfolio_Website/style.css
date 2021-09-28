@@ -21,7 +21,7 @@ Date: 6/7/21 */
 
 /*dark theme button icon*/
 .dark_theme button {
-	background-image: url("sunicon.png");
+	background-image: url('sunicon.png');
 }
 
 /*light theme colors*/
@@ -39,7 +39,7 @@ Date: 6/7/21 */
 
 /*light theme button icon*/
 .light_theme button {
-	background-image: url("moonicon.png");
+	background-image: url('moonicon.png');
 }
 
 /* Body styling */
@@ -106,7 +106,7 @@ button:active {
 
 /* banner image */
 .bannerimage {
-  	background-image: url("banner.jpg"), linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  	background-image: url('banner.jpg'), linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
   	height: 22%;
   	background-position: center;
  	background-repeat: no-repeat;

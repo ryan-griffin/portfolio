@@ -1,4 +1,4 @@
-// function to set a given theme/color-scheme
+// function to set theme
 function set_theme(themeName) {
     localStorage.setItem('theme', themeName);
     document.documentElement.className = themeName;
@@ -15,9 +15,9 @@ function toggle_theme() {
 
 // Immediately invoked function to set the theme on initial load
 (function () {
-    if (localStorage.getItem('theme') === 'dark_theme') {
-        set_theme('dark_theme');
-    } else {
+    if (localStorage.getItem('theme') === 'light_theme') {
         set_theme('light_theme');
+    } else {
+        set_theme('dark_theme');
     }
 })();
