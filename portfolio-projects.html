@@ -1,0 +1,112 @@
+<!--Name: Ryan Griffin
+Date: 6/7/21-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Portfolio - Projects</title>
+		<meta name='viewport' content='width=device-width, intital-scale=1.0'>
+		<link rel='icon' href='images/favicon.png'>
+		<link href='style.css' rel='stylesheet'>
+		<script src='javascript.js'></script>
+
+		<style>
+			/* Layout */
+			.grid-container {
+				display: grid;
+				grid-template-columns: 31% auto 31%;
+				grid-gap: 2vw;
+				margin: 2vw;
+				text-align: center;
+			}
+
+			/* Box */
+			.project {
+				background-color: var(--boxcolor);
+				border-radius: 20px;
+				padding: clamp(15px, 2vw, 30px);
+				box-shadow: var(--boxshadow);
+				font-size: 18px;
+				line-height: 1.4;
+			}
+
+			/* Title */
+			.project h1 {
+				padding-bottom: 20px;
+			}
+
+			/* Paragraph */
+			.project p {
+				padding-top: 20px;
+			}
+
+			@media only screen and (max-width: 1100px) {
+				/* Layout */
+				.grid-container {
+					grid-template-columns: 50% auto;
+				}
+			}
+
+			@media only screen and (max-width: 650px) {
+				/* Layout */
+				.grid-container {
+					grid-template-columns: 100%;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class='nav'>
+	  		<a href='index.html'>About</a>
+	  		<a class='active' href='portfolio-projects.html'>Projects</a>
+	  		<a href='portfolio-certifications.html'>Certifications</a>
+	  		<a href='portfolio-resume.html'>Resume</a>
+	  		<a href='portfolio-contact.html'>Contact</a>
+			<button onclick='toggle_theme()'></button>
+		</div>
+
+		<div class='bannerimage'>
+			<div class='bannertext'>
+				<h1>Projects</h1>
+			</div>
+		</div>
+
+		<div class='grid-container'>
+			<div class='project'>
+				<h1>Alice Game</h1>
+
+				<img src='images/alice_game.jpg' width='100%' style='border-radius: 20px;'>
+
+				<p>For this project I used the program alice to create a game. Alice uses block code to emulate Java. The character in the game is a turtle who has to eliminate all the aliens in order to win. The alien has a bow and arrow to kill the aliens with. the aliens kill the player with a melee attack. At the end of the game there is a large boss alien to kill, when the boss is killed you win the game. To make this game I leared how to add a movement system and colison. I created AI to make the aliens seek towards the player to attack. I designed the map also.</p>
+			</div>
+
+			<div class='project'>
+				<h1>Unreal Engine Game</h1>
+
+				<img src='images/unreal_engine_game.jpg' width='100%' style='border-radius: 20px;'>
+
+				<p>For this project I learned about game development using unreal engine and I created a basic FPS game. I learned how to implement physics such as gravity and colison. I was able to create movement system with jumping and crouching. I created a health system that allows the player to take damage from the zombies when they attack. The zombies have a basic AI that makes them run towards the player when they see him. A gun is used to kill the zombies, it has an ammo counter and can reload. The player and zombies are complete with animations. I made the UI show all the useful infromaton needed such as ammo count, grenade count, health, objective, and the minimap. I also designed a map.</p>
+			</div>
+
+			<div class='project'>
+				<h1>Python Calculator</h1>
+					
+				<img src='images/calculator.png' width='100%' style='border-radius: 20px;'>
+					
+				<p>I created a basic calculator using python. It includes the basic functions like adding, subtracting, multiplication and division.</p>
+			</div>
+		</div>
+
+		<footer>
+			<div class='contact-container'>
+				<a class='email' href='mailto:ryangrif875@gmail.com' target='_blank'><img src='images/email_icon.jpg'></a>
+				<a class='twitter' href='https://twitter.com/ryan_griffin45' target='_blank'><img src='images/twitter_icon.jpg'></a>
+				<a class='instagram' href='https://www.instagram.com/ryan_griffin45/' target='_blank'><img src='images/instagram_icon.jpg'></a>
+				<a class='discord' href='https://discordapp.com/users/6043/' target='_blank'><img src='images/discord_icon.jpg'></a>
+				<a class='github' href='https://github.com/ryan-griffin' target='_blank'><img src='images/github_icon.jpg'></a>
+				<a class='credly' href='https://www.credly.com/users/ryan-griffin.f79cdd37' target='_blank'><img src='images/credly_icon.jpg'></a>
+			</div>
+			<p>Resources: <a href='https://www.w3schools.com/' target='_blank'>W3Schools</a>, <a href='https://stackoverflow.com/' target='_blank'>Stack Overflow</a>, <a href='https://css-tricks.com/' target='_blank'>CSS Tricks</a></p>
+		</footer>
+	</body>
+</html>
