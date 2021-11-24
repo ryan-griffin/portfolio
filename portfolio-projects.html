@@ -7,52 +7,8 @@ Date: 6/7/21-->
 		<meta name='viewport' content='width=device-width, intital-scale=1.0'>
 		<link rel='icon' href='images/favicon.png'>
 		<link href='main_style.css' rel='stylesheet'>
+		<link rel="stylesheet" href="projects_style.css">
 		<script src='javascript.js'></script>
-
-		<style>
-			/* Layout */
-			.grid-container {
-				display: grid;
-				grid-template-columns: 1fr 1fr 1fr;
-				grid-gap: 2vw;
-				margin: 2vw;
-				text-align: center;
-			}
-
-			/* Box */
-			.project {
-				background-color: var(--boxcolor);
-				border-radius: 20px;
-				padding: clamp(15px, 2vw, 30px);
-				box-shadow: var(--boxshadow);
-				font-size: 18px;
-				line-height: 1.4;
-			}
-
-			/* Title */
-			.project h1 {
-				padding-bottom: 20px;
-			}
-
-			/* Paragraph */
-			.project p {
-				padding-top: 20px;
-			}
-
-			@media only screen and (max-width: 1100px) {
-				/* Layout */
-				.grid-container {
-					grid-template-columns: 1fr 1fr;
-				}
-			}
-
-			@media only screen and (max-width: 650px) {
-				/* Layout */
-				.grid-container {
-					grid-template-columns: 100%;
-				}
-			}
-		</style>
 	</head>
 
 	<body>
@@ -90,11 +46,22 @@ Date: 6/7/21-->
 
 			<div class='project'>
 				<h1>Python Calculator</h1>
-					
 				<img src='images/calculator.png' width='100%' style='border-radius: 20px;'>
-					
 				<p>I created a basic calculator using python. It includes the basic functions like adding, subtracting, multiplication and division.</p>
 			</div>
+			
+			<div class='project'>
+				<h1>Rice Memorial Baptist Church Website</h1>	
+				<img src='images/rice_church.png' width='100%' style='border-radius: 20px;'>	
+				<p>Website for the Rice Memorial Baptist Church in Northborough Massachusetts.</p>
+			</div>
+
+			<div class='project'>
+				<h1>NTFW Website</h1>	
+				<img src='images/ntfw.png' width='100%' style='border-radius: 20px;'>	
+				<p>Website for the Tri County Strutters</p>
+			</div>
+
 		</div>
 
 		<footer>
