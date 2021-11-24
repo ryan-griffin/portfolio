@@ -1,0 +1,154 @@
+/* Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 25%;
+    margin: 2vw;
+    grid-gap: 2vw;
+  }
+
+/* First box */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(15px, 2vw, 30px);
+    background-color: var(--boxcolor);
+    border-radius: 20px;
+    box-shadow: var(--boxshadow);
+}
+
+/* Title section of fist box */
+.title {
+    display: flex;
+    align-items: center;
+    margin: 0 auto 0 auto;
+}
+
+/* Picture of me */
+.title img {
+    height: 170px;
+    border-radius: 999px;
+}
+
+  /* My name */
+  .title h1 {
+    font-size: 50px;
+    padding-left: 30px;
+  }
+
+  /* Body text and image of first box */
+  content {
+    padding-top: 50px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  /* Programming image side */
+  #sideimage {
+    width: 45%;
+    border-radius: 20px;
+    float: right;
+    margin: 0px 0px 30px 30px;
+  }
+
+  /* Programming image bottom */
+  #bottomimage {
+    display: none;
+  }
+
+  /* Paragraph of first box */
+  content p {
+    padding-bottom: 20px;
+  }
+
+  /* Second box */
+  aside {
+    text-align: center;
+    padding: clamp(15px, 2vw, 30px);
+    border-radius: 20px;
+    background-color: var(--boxcolor);
+    box-shadow: var(--boxshadow);
+  }
+
+  /* Assabet logo */
+  #assabet_logo {
+    width: 120px;
+    border-radius: 999px;
+    margin: auto;
+  }
+
+  /* Name of school */
+  aside h1 {
+    font-size: 26px;
+    padding: 20px;
+  }
+
+  /* Second box body text */
+  aside p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* Image of school*/
+  #assabet_school {
+    width: 100%;
+    border-radius: 20px;
+    margin: 20px 0px 20px 0px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    /* Layout */
+    .grid-container {
+          grid-template-columns: 50% auto;
+    }
+
+    /* Title section of fist box */
+    .title {
+          flex-direction: column;
+    }
+
+    /* Picture of me */
+    .title img {
+          height: 140px;
+    }
+
+    /* My name */
+    .title h1 {
+          font-size: 40px;
+          padding: 20px 0px 20px 0px;
+    }
+
+    /* Body text and image of first box */
+    content {
+          font-size: 18px;
+          padding: 0px;
+    }
+
+    /* Paragraph of first box */
+    content p {
+      text-align: center;
+    }
+
+    /* Programming image side */
+    #sideimage {
+    display: none;
+    }
+
+    /* Programming image bottom */
+    #bottomimage {
+          display: block;
+          width: 100%;
+          border-radius: 20px;
+    }
+
+    /* Assabet logo */
+    #assabet_logo {
+          width: 140px;
+    }
+}
+
+  @media only screen and (max-width: 650px) {
+    /* Layout */
+    .grid-container {
+          grid-template-columns: 100%;
+    }
+}
