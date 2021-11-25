@@ -57,12 +57,23 @@ nav a {
     text-decoration: none;
     font-size: 18px;
     padding: 14px 24px;
+    display: flex;
 }
 
 /* Navigation bar links hover */
 nav a:hover {
     border-bottom: solid 3px var(--textcolor);
     transition: 0.1s;
+}
+
+nav a img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.light_theme nav a img {
+    filter: invert();
 }
 
 #links {
@@ -85,6 +96,7 @@ nav a:hover {
     text-decoration: none;
     font-size: 18px;
     padding: 14px 24px;
+    display: flex;
 }
 
 /* Navigation bar links hover */
@@ -92,6 +104,16 @@ nav a:hover {
     border-left: solid 3px var(--textcolor);
     padding: 14px 21px;
     transition: 0.1s;
+}
+
+#links a img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.light_theme #links a img {
+    filter: invert();
 }
 
 /*button for dark theme*/
