@@ -5,7 +5,7 @@
     margin: 2vw;
     grid-gap: 2vw;
     justify-content: center;
-  }
+}
 
 /* Box */
 .certification {
@@ -16,82 +16,82 @@
     height: 200px;
     background-color: var(--boxcolor);
     box-shadow: var(--boxshadow);
-  }
+}
 
 /* logos */
-  .certification img {
+.certification img {
     border-radius: 999px;
     height: 100%;
-  }
+}
 
-  /* Titles */
-  .certification h1 {
+/* Titles */
+.certification h1 {
     font-size: 35px;
     white-space: nowrap;
     padding: 0 30px 0 30px;
-  }
+}
 
-  /* Description of certification */
-  .description {
+/* Description of certification */
+.description {
     font-size: 18px;
     line-height: 1.4;
     padding-left: 30px;
-  }
+}
 
-  /* divider for title and description */
-  .line {
+/* divider for title and description */
+.line {
     border-left: 1px solid grey;
     height: 100%;
-  }
+}
 
-  @media only screen and (max-width: 1650px) {
+@media only screen and (max-width: 1650px) {
     /* Layout */
     .grid-container {
-          grid-template-columns: 90%;
+        grid-template-columns: 90%;
     }
-  }
+}
 
-  @media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1500px) {
     /* Layout */
     .grid-container {
-          grid-template-columns: 50% auto;
+        grid-template-columns: 50% auto;
     }
 
     /* Box */
     .certification {
-          flex-direction: column;
-          height: auto;
-          text-align: center;
+        flex-direction: column;
+        height: auto;
+        text-align: center;
     }
 
     /* logos */
     .certification img {
-          height: 140px;
+        height: 140px;
     }
 
     /* Titles */
     .certification h1 {
-          white-space: normal;
-          padding: 20px;
+        white-space: normal;
+        padding: 20px;
     }
 
     /* Description of certification */
     .description {
-          padding: 0px;
+        padding: 0px;
     }
 
     /* divider for title and description */
     .line {
-          display: none;
+        display: none;
     }
-  }
+}
 
-  @media only screen and (max-width: 650px) {
+@media only screen and (max-width: 650px) {
     /* Layout */
     .grid-container {
-          grid-template-columns: 100%;
+        grid-template-columns: 100%;
     }
-  }
+}
 
 @media only screen and (max-width: 1650px) {
     .bannertext {
