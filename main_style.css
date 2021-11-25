@@ -14,7 +14,6 @@ Date: 6/7/21 */
     --backgroundcolor: #35363a;
     --boxcolor: #202124;
     --navcolor: rgba(32, 33, 36, 75%);
-    --navlinkhover: lightgrey;
     --footercolor: #111111;
     --footerlinkcolor: lightgrey;
     --scrollbarcolor: grey;
@@ -27,7 +26,6 @@ Date: 6/7/21 */
     --backgroundcolor: white;
     --boxcolor: #f2f3f4;
     --navcolor: rgba(245, 245, 245, 60%);
-    --navlinkhover: grey;
     --footercolor: #dddedf;
     --footerlinkcolor: grey;
     --scrollbarcolor: grey;
@@ -48,6 +46,7 @@ nav {
     background-color: var(--navcolor);
     backdrop-filter: blur(20px);
     width: 100%;
+    height: 50px;
     position: fixed;
     z-index: 1;
 }
@@ -62,14 +61,8 @@ nav a {
 
 /* Navigation bar links hover */
 nav a:hover {
-    color: var(--navlinkhover);
+    border-bottom: solid 3px var(--textcolor);
     transition: 0.1s;
-}
-
-/* Current page */
-.active {
-    border-bottom: solid var(--textcolor);
-    border-width: 2px;
 }
 
 #links {
@@ -96,14 +89,9 @@ nav a:hover {
 
 /* Navigation bar links hover */
 #links a:hover {
-    color: var(--navlinkhover);
+    border-left: solid 3px var(--textcolor);
+    padding: 14px 21px;
     transition: 0.1s;
-}
-
-/* Current page */
-#links a.active {
-    border-bottom: solid var(--textcolor);
-    border-width: 2px;
 }
 
 /*button for dark theme*/
@@ -267,10 +255,11 @@ footer p a {
     nav a {
         display: none;
     }
+}
 
-    #links a.active {
-        border-bottom: none;
-        border-left: solid var(--textcolor);
+@media only screen and (min-width: 700px) {
+    #links {
+        display: none;
     }
 }
 
