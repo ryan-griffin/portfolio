@@ -1,7 +1,7 @@
 /* Layout */
 .grid-container {
     display: grid;
-    grid-template-areas: '. . .' ;
+    grid-template-areas: ". . ." ;
     row-gap: 5vw;
     margin: 5vw;
     justify-content: center;
@@ -42,7 +42,7 @@
   @media only screen and (max-width: 1000px) {
     /* Layout */
     .grid-container {
-          grid-template-areas: '. .' ;
+          grid-template-areas: ". ." ;
     }
 
     /* Contact methods */
@@ -59,7 +59,7 @@
   @media only screen and (max-width: 650px) {
     /* Layout */
     .grid-container {
-          grid-template-areas: '.' ;
+          grid-template-areas: "." ;
           row-gap: 8vw;
     }
 

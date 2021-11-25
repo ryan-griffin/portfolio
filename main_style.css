@@ -19,11 +19,6 @@ Date: 6/7/21 */
 	--scrollbarhovercolor: #9C9C9C;
 }
 
-/*dark theme button icon*/
-.dark_theme button {
-	background-image: url('images/sunicon.png');
-}
-
 /*light theme colors*/
 .light_theme {
 	--textcolor: black;
@@ -37,13 +32,8 @@ Date: 6/7/21 */
 	--scrollbarhovercolor: #646464;
 }
 
-/*light theme button icon*/
-.light_theme button {
-	background-image: url('images/moonicon.png');
-}
-
 /* Body styling */
-html, body {
+body {
 	background-color: var(--backgroundcolor);
   	height: 100%;
   	font-family: arial;
@@ -51,43 +41,75 @@ html, body {
 }
 
 /* Navigation bar */
-.nav {
+nav {
   	display: flex;
   	background-color: var(--navcolor);
   	backdrop-filter: blur(20px);
   	width: 100%;
   	position: fixed;
-  	z-index: 999;
-  	top: 0;
+  	z-index: 1;
 }
 
 /* Navigation bar links */
-.nav a {
+nav a {
   	color: var(--textcolor);
   	text-decoration: none;
   	font-size: 18px;
-  	text-align: center;
-  	padding: 12px 24px 12px 24px;
+  	padding: 14px 24px;
 }
 
 /* Navigation bar links hover */
-.nav a:hover {
+nav a:hover {
   	color: var(--navlinkhover);
   	transition-duration: 0.1s;
 }
 
 /* Current page */
-.nav a.active {
+.active {
+ 	border-bottom: solid var(--textcolor);
+  	border-width: 2px;
+}
+
+#links {
+	display: flex;
+	overflow: hidden;
+	position: fixed;
+	flex-direction: column;
+	z-index: 2;
+	width: 0;
+	height: 100vh;
+	margin-top: 50px;
+	background-color: var(--navcolor);
+	backdrop-filter: blur(20px);
+	transition:  0.25s;
+    transition-property: width;
+}
+
+/* Navigation bar links */
+#links a {
+  	color: var(--textcolor);
+  	text-decoration: none;
+  	font-size: 18px;
+  	padding: 14px 24px;
+}
+
+/* Navigation bar links hover */
+#links a:hover {
+  	color: var(--navlinkhover);
+  	transition-duration: 0.1s;
+}
+
+/* Current page */
+#links a.active {
  	border-bottom: solid var(--textcolor);
   	border-width: 2px;
 }
 
 /*button for dark theme*/
 button {
-	margin: auto 10px auto auto;
 	border: none;
-	height: 32px;
-	width: 32px;
+	height: 38px;
+	width: 38px;
 	background: none;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -104,10 +126,29 @@ button:active {
   	transition-duration: 0.1s;
 }
 
+#hamburger {
+	display: none;
+	margin: auto auto auto 10px;
+}
+
+button:nth-child(7) {
+	margin: auto 10px auto auto;
+}
+
+/*dark theme button icon*/
+.dark_theme button:nth-child(7) {
+	background-image: url("images/sunicon.png");
+}
+
+/*light theme button icon*/
+.light_theme button:nth-child(7) {
+	background-image: url("images/moonicon.png");
+}
+
 /* banner image */
 .bannerimage {
-  	background-image: url('images/banner.jpg'), linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-  	height: 22%;
+  	background-image: url("images/banner.jpg"), linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  	height: 200px;
   	background-position: center;
  	background-repeat: no-repeat;
   	background-size: cover;
@@ -132,7 +173,7 @@ footer {
 /*Layout for contact links */
 .contact-container {
   	display: grid;
-  	grid-template-areas: 'email twitter instagram discord github credly';
+  	grid-template-areas: "email twitter instagram discord github credly";
   	justify-content: center;
   	grid-gap: 22px;
   	padding: 25px;
@@ -207,36 +248,31 @@ footer p a {
   	color: var(--footerlinkcolor);
 }
 
-@media only screen and (max-width: 600px) {
-  	/* Navigation bar */
-  	.nav {
-		justify-content: center;
-  	}
-  
-  	/* Navigation bar links */
-  	.nav a {
-		font-size: 14px;
-		padding: 10px;
-  	}
+@media only screen and (max-width: 700px) {
+	nav {
+		height: 50px;
+	}
 
-  	/* banner image */
-  	.bannerimage {
-		height: 14%;
-  	}
+	#hamburger {
+		display: flex;
+	}
 
-  	/* banner image text */
-  	.bannertext {
-		font-size: 20px;
-		top: 67%;
-  	}
+	nav a {
+		display: none;
+	}
+
+	#links a.active {
+		border-bottom: none;
+		border-left: solid var(--textcolor);
+	}
 }
 
 @media only screen and (max-width: 420px) {
   	/*Layout for contact links */
   	.contact-container {
 		grid-template-areas: 
-	  	'. email twitter instagram discord .'
-	  	'. . github credly . .';
+	  	". email twitter instagram discord ."
+	  	". . github credly . .";
   	}
 }
 
