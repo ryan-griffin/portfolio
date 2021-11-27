@@ -1,7 +1,7 @@
 /* Layout */
 .grid-container {
     display: grid;
-    grid-template-areas: ". . .";
+    grid-template-columns: 1fr 1fr 1fr;
     row-gap: 5vw;
     margin: 5vw;
     justify-content: center;
@@ -12,12 +12,11 @@
     text-align: center;
     word-wrap: break-word;
     font-size: 20px;
-    width: 25vw;
 }
 
 /* Image links to contact */
 .grid-container a img {
-    width: 9vw;
+    width: 170px;
     border-radius: 999px;
 }
 
@@ -42,35 +41,24 @@
 @media only screen and (max-width: 1000px) {
     /* Layout */
     .grid-container {
-        grid-template-areas: ". .";
-    }
-
-    /* Contact methods */
-    .item {
-        width: 40vw;
+        grid-template-columns: 1fr 1fr;
     }
 
     /* Image links to contact */
     .grid-container a img {
-        width: 15vw;
+        width: 150px;
     }
 }
 
 @media only screen and (max-width: 650px) {
     /* Layout */
     .grid-container {
-        grid-template-areas: ".";
+        grid-template-columns: 1fr;
         row-gap: 8vw;
     }
 
     /* Contact methods */
     .item {
-        width: 100%;
         font-size: 16px;
-    }
-
-    /* Image links to contact */
-    .grid-container a img {
-        width: 24vw;
     }
 }

@@ -1,7 +1,7 @@
 /* Layout */
 .grid-container {
     display: grid;
-    grid-template-columns: 80%;
+    grid-template-columns: 1500px;
     margin: 2vw;
     grid-gap: 2vw;
     justify-content: center;
@@ -44,17 +44,10 @@
     height: 100%;
 }
 
-@media only screen and (max-width: 1650px) {
+@media only screen and (max-width: 1560px) {
     /* Layout */
     .grid-container {
-        grid-template-columns: 90%;
-    }
-}
-
-@media only screen and (max-width: 1500px) {
-    /* Layout */
-    .grid-container {
-        grid-template-columns: 50% auto;
+        grid-template-columns: 1fr 1fr;
     }
 
     /* Box */
@@ -89,7 +82,7 @@
 @media only screen and (max-width: 650px) {
     /* Layout */
     .grid-container {
-        grid-template-columns: 100%;
+        grid-template-columns: 1fr;
     }
 }
 

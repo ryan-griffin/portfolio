@@ -1,7 +1,7 @@
 /* Layout */
 .grid-container {
     display: grid;
-    grid-template-columns: auto 25%;
+    grid-template-columns: 1.45fr 0.55fr;
     margin: 2vw;
     grid-gap: 2vw;
 }
@@ -95,10 +95,10 @@ aside p {
     margin: 20px 0px 20px 0px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1300px) {
     /* Layout */
     .grid-container {
-        grid-template-columns: 50% auto;
+        grid-template-columns: 1fr 1fr;
     }
 
     /* Title section of fist box */
@@ -149,6 +149,6 @@ aside p {
 @media only screen and (max-width: 650px) {
     /* Layout */
     .grid-container {
-        grid-template-columns: 100%;
+        grid-template-columns: 1fr;
     }
 }
