@@ -11,7 +11,7 @@ main {
     display: flex;
     flex-direction: column;
     padding: clamp(15px, 2vw, 30px);
-    background-color: var(--boxcolor);
+    background: var(--boxcolor);
     border-radius: 20px;
     box-shadow: var(--boxshadow);
 }
@@ -65,7 +65,7 @@ aside {
     text-align: center;
     padding: clamp(15px, 2vw, 30px);
     border-radius: 20px;
-    background-color: var(--boxcolor);
+    background: var(--boxcolor);
     box-shadow: var(--boxshadow);
 }
 
@@ -93,6 +93,10 @@ aside p {
     width: 100%;
     border-radius: 20px;
     margin: 20px 0px 20px 0px;
+}
+
+aside a {
+    color: var(--textcolor);
 }
 
 @media only screen and (max-width: 1300px) {

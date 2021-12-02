@@ -9,7 +9,7 @@
 
 /* Box */
 .project {
-    background-color: var(--boxcolor);
+    background: var(--boxcolor);
     border-radius: 20px;
     padding: clamp(15px, 2vw, 30px);
     box-shadow: var(--boxshadow);
@@ -20,6 +20,11 @@
 /* Title */
 .project h1 {
     padding-bottom: 20px;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 /* Paragraph */

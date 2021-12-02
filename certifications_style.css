@@ -14,7 +14,7 @@
     padding: clamp(15px, 2vw, 30px);
     border-radius: 20px;
     height: 200px;
-    background-color: var(--boxcolor);
+    background: var(--boxcolor);
     box-shadow: var(--boxshadow);
 }
 
