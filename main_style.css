@@ -4,8 +4,7 @@ Date: 6/7/21 */
 * {
     margin: 0;
     --boxshadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.2);
-    transition: 0.25s;
-    transition-property: background-color;
+    transition: background-color 0.25s;
 }
 
 /*dark theme colors*/
@@ -56,20 +55,24 @@ nav a {
     color: var(--textcolor);
     text-decoration: none;
     font-size: 18px;
-    padding: 14px 24px;
+    padding: 14px 20px;
     display: flex;
+    transition: 0.1s;
 }
 
 /* Navigation bar links hover */
 nav a:hover {
     border-bottom: solid 3px var(--textcolor);
-    transition: 0.1s;
 }
 
 nav a img {
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+nav a div {
+    height: 20px;
+    margin: 1px auto 1px 10px;
 }
 
 .light_theme nav a img {
@@ -96,19 +99,19 @@ nav a img {
     text-decoration: none;
     font-size: 18px;
     display: flex;
-    padding: 16px 20px;
+    padding: 14px 14px;
 }
 
 /* Navigation bar links hover */
 #links a:hover {
     border-left: solid 3px var(--textcolor);
-    padding: 16px 17px;
+    padding: 14px 11px;
     transition: 0.1s;
 }
 
 #links a img {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     margin-right: 10px;
 }
 
@@ -119,27 +122,18 @@ nav a img {
 /*button for dark theme*/
 button {
     border: none;
-    height: 30px;
-    width: 30px;
+    height: 34px;
+    width: 34px;
     background: none;
     background-size: 100%;
     background-repeat: no-repeat;
     cursor: pointer;
 }
 
-button:hover {
-    transform: scale(1.03);
-    transition: 0.1s;
-}
-
-button:active {
-    transform: scale(0.96);
-    transition: 0.1s;
-}
 
 #hamburger {
     display: none;
-    margin: auto auto auto 14px;
+    margin: auto auto auto 10px;
     background-image: url("images/hamburger.png");
 }
 
@@ -148,17 +142,15 @@ button:active {
 }
 
 button:nth-child(7) {
-    margin: auto 14px auto auto;
-}
-
-/*dark theme button icon*/
-.dark_theme button:nth-child(7) {
-    background-image: url("images/sun.png");
+    background-image: url("images/theme.png");
+    margin: auto 10px auto auto;
+    transition: 0.25s;
 }
 
 /*light theme button icon*/
 .light_theme button:nth-child(7) {
-    background-image: url("images/moon.png");
+    filter: invert();
+    transform: rotate(180deg);
 }
 
 /* banner image */
