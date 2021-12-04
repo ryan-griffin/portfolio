@@ -17,6 +17,7 @@ Date: 6/7/21 */
     --footerlinkcolor: lightgrey;
     --scrollbarcolor: grey;
     --scrollbarhovercolor: #9c9c9c;
+    --mobilelinkhover: rgba(128, 128, 128, 20%);
 }
 
 /*light theme colors*/
@@ -29,6 +30,7 @@ Date: 6/7/21 */
     --footerlinkcolor: grey;
     --scrollbarcolor: grey;
     --scrollbarhovercolor: #646464;
+    --mobilelinkhover: rgba(128, 128, 128, 20%);
 }
 
 /* Body styling */
@@ -99,14 +101,15 @@ nav a div {
     text-decoration: none;
     font-size: 18px;
     display: flex;
-    padding: 14px 14px;
+    padding: 12px;
+    margin: 6px 6px 0px 6px;
+    border-radius: 6px;
+    transition: 0s;
 }
 
 /* Navigation bar links hover */
 #links a:hover {
-    border-left: solid 3px var(--textcolor);
-    padding: 14px 11px;
-    transition: 0.1s;
+    background-color: var(--mobilelinkhover);
 }
 
 #links a img {
