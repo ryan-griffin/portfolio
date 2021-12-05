@@ -1,10 +1,17 @@
 /* Name: Ryan Griffin
 Date: 6/7/21 */
 
+@font-face {
+    font-family: roboto;
+    src: url(../font/roboto.ttf);
+}
+
 * {
     margin: 0;
+    font-family: roboto;
+    color: var(--textcolor);
+    transition: background-color 0.3s;
     --boxshadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.25s;
 }
 
 /*dark theme colors*/
@@ -12,7 +19,7 @@ Date: 6/7/21 */
     --textcolor: white;
     --backgroundcolor: #35363a;
     --boxcolor: #202124;
-    --navcolor: rgba(32, 33, 36, 75%);
+    --navcolor: rgba(53, 54, 58, 70%);
     --footercolor: #111111;
     --footerlinkcolor: lightgrey;
     --scrollbarcolor: grey;
@@ -25,7 +32,7 @@ Date: 6/7/21 */
     --textcolor: black;
     --backgroundcolor: white;
     --boxcolor: #f2f3f4;
-    --navcolor: rgba(245, 245, 245, 60%);
+    --navcolor: rgba(255, 255, 255, 60%);
     --footercolor: #dddedf;
     --footerlinkcolor: grey;
     --scrollbarcolor: grey;
@@ -33,19 +40,17 @@ Date: 6/7/21 */
     --mobilelinkhover: rgba(128, 128, 128, 20%);
 }
 
+
 /* Body styling */
 body {
     background: var(--backgroundcolor);
-    height: 100%;
-    font-family: arial;
-    color: var(--textcolor);
 }
 
 /* Navigation bar */
 nav {
     display: flex;
     background: var(--navcolor);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(30px);
     width: 100%;
     height: 50px;
     position: fixed;
@@ -91,7 +96,7 @@ nav a div {
     height: 100vh;
     margin-top: 50px;
     background: var(--navcolor);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(30px);
     transition: 0.25s;
 }
 
@@ -133,11 +138,10 @@ button {
     cursor: pointer;
 }
 
-
 #hamburger {
     display: none;
     margin: auto auto auto 10px;
-    background-image: url("images/hamburger.png");
+    background-image: url("../images/hamburger.png");
 }
 
 .light_theme #hamburger {
@@ -145,9 +149,9 @@ button {
 }
 
 button:nth-child(7) {
-    background-image: url("images/theme.png");
+    background-image: url("../images/theme.png");
     margin: auto 10px auto auto;
-    transition: 0.25s;
+    transition: transform 0.25s;
 }
 
 /*light theme button icon*/
@@ -158,7 +162,7 @@ button:nth-child(7) {
 
 /* banner image */
 .bannerimage {
-    background-image: url("images/banner.jpg"),
+    background-image: url("../images/banner.jpg"),
         linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
     height: 200px;
     background-position: center;
@@ -258,6 +262,11 @@ footer p {
 /* Resources links */
 footer p a {
     color: var(--footerlinkcolor);
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 800px) {

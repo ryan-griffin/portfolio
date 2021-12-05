@@ -32,32 +32,27 @@ main {
 /* My name */
 .title h1 {
     font-size: 50px;
-    padding-left: 30px;
+    margin-left: clamp(15px, 2vw, 30px);
 }
 
 /* Body text and image of first box */
 content {
-    padding-top: 50px;
+    margin-top: clamp(15px, 2vw, 30px);
     font-size: 20px;
     line-height: 1.4;
+    display: flex;
 }
 
 /* Programming image side */
-#sideimage {
+content img {
     width: 45%;
     border-radius: 10px;
-    float: right;
-    margin: 0px 0px 30px 30px;
-}
-
-/* Programming image bottom */
-#bottomimage {
-    display: none;
+    margin-left: clamp(15px, 2vw, 30px);
 }
 
 /* Paragraph of first box */
 content p {
-    padding-bottom: 20px;
+    margin-bottom: clamp(15px, 2vw, 30px);
 }
 
 /* Second box */
@@ -79,7 +74,7 @@ aside {
 /* Name of school */
 aside h1 {
     font-size: 26px;
-    padding: 20px;
+    margin: clamp(15px, 2vw, 30px);
 }
 
 /* Second box body text */
@@ -92,11 +87,16 @@ aside p {
 #assabet_school {
     width: 100%;
     border-radius: 10px;
-    margin: 20px 0px 20px 0px;
+    margin: clamp(15px, 2vw, 30px) 0px clamp(15px, 2vw, 30px) 0px;
 }
 
 aside a {
     color: var(--textcolor);
+    text-decoration: none;
+}
+
+aside a:hover {
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -118,13 +118,14 @@ aside a {
     /* My name */
     .title h1 {
         font-size: 40px;
-        padding: 20px 0px 20px 0px;
+        margin: clamp(15px, 2vw, 30px) 0px clamp(15px, 2vw, 30px) 0px;
     }
 
     /* Body text and image of first box */
     content {
+        flex-direction: column;
         font-size: 18px;
-        padding: 0px;
+        margin: 0px;
     }
 
     /* Paragraph of first box */
@@ -132,16 +133,9 @@ aside a {
         text-align: center;
     }
 
-    /* Programming image side */
-    #sideimage {
-        display: none;
-    }
-
-    /* Programming image bottom */
-    #bottomimage {
-        display: block;
+    content img {
         width: 100%;
-        border-radius: 10px;
+        margin-left: 0;
     }
 
     /* Assabet logo */
