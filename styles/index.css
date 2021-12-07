@@ -1,9 +1,6 @@
 /* Layout */
 .grid-container {
-    display: grid;
     grid-template-columns: 1.45fr 0.55fr;
-    margin: 2vw;
-    grid-gap: 2vw;
 }
 
 /* First box */
@@ -14,6 +11,7 @@ main {
     background: var(--boxcolor);
     border-radius: 20px;
     box-shadow: var(--boxshadow);
+    animation: move-up 0.5s;
 }
 
 /* Title section of fist box */
@@ -62,6 +60,7 @@ aside {
     border-radius: 20px;
     background: var(--boxcolor);
     box-shadow: var(--boxshadow);
+    animation: move-up 0.55s;
 }
 
 /* Assabet logo */

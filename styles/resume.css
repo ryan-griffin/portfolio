@@ -1,18 +1,23 @@
-/*resume*/
-iframe {
-    display: flex;
+.grid-container {
     width: 750px;
     height: 100vh;
-    margin: 2vw auto 2vw auto;
+    margin: auto;
+}
+
+/*resume*/
+iframe {
+    width: 100%;
+    height: 100%;
     border: none;
     border-radius: 20px;
     box-shadow: var(--boxshadow);
     background: white;
+    animation: move-up 0.5s;
 }
 
 @media only screen and (max-width: 800px) {
     /*resume*/
-    iframe {
+    .grid-container {
         width: 96vw;
     }
 }

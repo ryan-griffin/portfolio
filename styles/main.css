@@ -181,6 +181,13 @@ button:nth-child(7) {
     font-size: 32px;
 }
 
+.grid-container {
+    display: grid;
+    padding: 2vw;
+    grid-gap: 2vw;
+    overflow: hidden;
+}
+
 /* Footer */
 footer {
     background: var(--footercolor);
@@ -315,3 +322,15 @@ footer p a:hover {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--scrollbarhovercolor);
 }
+
+@keyframes move-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: translateY(0);
+    }
+}
+
