@@ -22,7 +22,7 @@ if (localStorage.getItem("theme") === "light_theme") {
 
 // opens and closes the mobile navigation links
 function expand() {
-    var x = document.getElementById("links");
+    var x = document.getElementById("hamburger_links");
     var y = document.getElementById("hamburger");
     if (x.style.width === "200px") {
         x.style.width = "0";

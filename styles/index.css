@@ -5,8 +5,13 @@
 
 /* First box */
 main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0fr;
+    gap: clamp(15px, 2vw, 30px);
+    grid-template-areas:
+        "name name"
+        ". .";
     padding: clamp(15px, 2vw, 30px);
     background: var(--boxcolor);
     border-radius: 20px;
@@ -15,65 +20,58 @@ main {
 }
 
 /* Title section of fist box */
-.title {
+.name {
     display: flex;
     align-items: center;
-    margin: 0 auto 0 auto;
+    margin: 0px auto;
+    grid-area: name;
 }
 
 /* Picture of me */
-.title img {
+.name img {
     height: 170px;
     border-radius: 999px;
 }
 
 /* My name */
-.title h1 {
+.name h1 {
     font-size: 50px;
     margin-left: clamp(15px, 2vw, 30px);
 }
 
 /* Body text and image of first box */
-content {
-    margin-top: clamp(15px, 2vw, 30px);
+main p {
     font-size: 20px;
     line-height: 1.4;
-    display: flex;
 }
 
 /* Programming image side */
-content img {
-    width: 45%;
+main > img {
     border-radius: 10px;
-    margin-left: clamp(15px, 2vw, 30px);
-}
-
-/* Paragraph of first box */
-content p {
-    margin-bottom: clamp(15px, 2vw, 30px);
+    width: 100%;
 }
 
 /* Second box */
 aside {
-    text-align: center;
     padding: clamp(15px, 2vw, 30px);
     border-radius: 20px;
+    text-align: center;
     background: var(--boxcolor);
     box-shadow: var(--boxshadow);
     animation: move-up 0.55s;
 }
 
 /* Assabet logo */
-#assabet_logo {
+aside img:nth-child(1) {
     width: 120px;
     border-radius: 999px;
-    margin: auto;
+    margin: 0px auto;
 }
 
 /* Name of school */
 aside h1 {
     font-size: 26px;
-    margin: clamp(15px, 2vw, 30px);
+    margin: clamp(15px, 2vw, 30px) 0;
 }
 
 /* Second box body text */
@@ -83,10 +81,10 @@ aside p {
 }
 
 /* Image of school*/
-#assabet_school {
+aside img:nth-child(4) {
     width: 100%;
     border-radius: 10px;
-    margin: clamp(15px, 2vw, 30px) 0px clamp(15px, 2vw, 30px) 0px;
+    margin: clamp(15px, 2vw, 30px) 0;
 }
 
 aside a {
@@ -104,41 +102,37 @@ aside a:hover {
         grid-template-columns: 1fr 1fr;
     }
 
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "name"
+            "."
+            ".";
+    }
+
     /* Title section of fist box */
-    .title {
+    .name {
         flex-direction: column;
     }
 
     /* Picture of me */
-    .title img {
+    .name img {
         height: 140px;
     }
 
     /* My name */
-    .title h1 {
+    .name h1 {
         font-size: 40px;
         margin: clamp(15px, 2vw, 30px) 0px clamp(15px, 2vw, 30px) 0px;
     }
 
-    /* Body text and image of first box */
-    content {
-        flex-direction: column;
-        font-size: 18px;
-        margin: 0px;
-    }
-
     /* Paragraph of first box */
-    content p {
+    main p {
         text-align: center;
     }
 
-    content img {
-        width: 100%;
-        margin-left: 0;
-    }
-
     /* Assabet logo */
-    #assabet_logo {
+    aside img:nth-child(1) {
         width: 140px;
     }
 }
