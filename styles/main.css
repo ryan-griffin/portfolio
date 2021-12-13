@@ -139,14 +139,14 @@ button {
     background-image: url("../images/hamburger.png");
 }
 
-button:nth-child(7) {
+button:nth-child(6) {
     background-image: url("../images/theme.png");
     margin: auto 10px auto auto;
     transition: transform 0.25s;
 }
 
 /*light theme button icon*/
-.light_theme button:nth-child(7) {
+.light_theme button:nth-child(6) {
     filter: invert();
     transform: rotate(180deg);
 }
