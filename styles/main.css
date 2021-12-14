@@ -51,6 +51,7 @@ nav {
     display: flex;
     background: var(--navcolor);
     backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
     width: 100%;
     height: 50px;
     position: fixed;
@@ -97,7 +98,7 @@ nav a div {
     margin-top: 50px;
     background: var(--navcolor);
     backdrop-filter: blur(30px);
-    --webkit-backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
     transition: 0.25s;
 }
 
