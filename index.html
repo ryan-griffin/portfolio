@@ -1,152 +1,113 @@
-<!--Name: Ryan Griffin
-Date: 6/7/21-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Portfolio - About</title>
-        <meta name="viewport" content="width=device-width, intital-scale=1.0" />
-        <link rel="icon" href="images/favicon.png" />
-        <link href="styles/main.css" rel="stylesheet" />
-        <link href="styles/index.css" rel="stylesheet" />
-        <script src="javascript/javascript.js"></script>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio</title>
+        <link rel="shortcut icon" href="icons/favicon.png" />
+        <link rel="stylesheet" href="style.css" />
     </head>
-
     <body>
         <nav>
-            <button onclick="expand()" id="hamburger"></button>
-            <a href="index.html"
-                ><img src="images/home.png" />
-                <div>Home</div></a
-            >
-            <a href="projects.html"
-                ><img src="images/projects.png" />
-                <div>Projects</div></a
-            >
-            <a href="certifications.html"
-                ><img src="images/certifications.png" />
-                <div>Certifications</div></a
-            >
-            <a href="resume.html"
-                ><img src="images/resume.png" />
-                <div>Resume</div></a
-            >
-            <button onclick="toggle_theme()"></button>
-        </nav>
-        <div id="hamburger_links">
-            <a href="index.html"
-                ><img src="images/home.png" />
-                <div>Home</div></a
-            >
-            <a href="projects.html"
-                ><img src="images/projects.png" />
-                <div>Projects</div></a
-            >
-            <a href="certifications.html"
-                ><img src="images/certifications.png" />
-                <div>Certifications</div></a
-            >
-            <a href="resume.html"
-                ><img src="images/resume.png" />
-                <div>Resume</div></a
-            >
-        </div>
-
-        <div class="bannerimage">
-            <div class="bannertext">
-                <h1>About</h1>
+            <button onclick="button_press()"></button>
+            <h2>Portfolio</h2>
+            <div class="links" >
+                <a href="#about" onclick="link_press()">About</a>
+                <a href="#projects" onclick="link_press()">Projects</a>
+                <a href="#certifications" onclick="link_press()">Certifications</a>
+                <a href="#resume" onclick="link_press()">Resume</a>
             </div>
-        </div>
-
-        <div class="grid-container">
-            <main>
-                <div class="name">
-                    <img src="images/pfp.jpg" />
-
-                    <h1>Ryan Griffin</h1>
-                </div>
+            <div class="socials">
+                <a href=""><img src="icons/twitter.png" /></a>
+                <a href=""><img src="icons/instagram.png" /></a>
+                <a href=""><img src="icons/github.png" /></a>
+            </div>
+        </nav>
+        <section id="about">
+            <div>
+                <h2>Hello, my name is</h2>
+                <h1>Ryan Griffin</h1>
+                <a href=""
+                    ><img src="icons/mail.png" />
+                    <h2>ryangrif875@gmail.com</h2></a
+                >
+            </div>
+            <div>
                 <p>
-                    Hello my name is Ryan Griffin. I am currently a student at
-                    Assabet Valley Regional Technical Highschool. I am enrolled
-                    in the Computer Programming and Web Development shop. I am very passionate about technology and want to learn as much as I can about it. I have always been interested in this from a young age. During my time in shop I have been able and learn how to program using html, css, javascript, php, python, and C++. I have also learned a lot more about computer hardware as well.
+                    I am currently a student at Assabet Valley Regional
+                    Technical Highschool. I am enrolled in the Computer
+                    Programming and Web Development shop. I am very passionate
+                    about technology and want to learn as much as I can about
+                    it. I have always been interested in this from a young age.
+                    During my time in shop I have been able and learn how to
+                    program using html, css, javascript, php, python, and C++. I
+                    have also learned a lot more about computer hardware as
+                    well.
                 </p>
                 <div>
-                    <img src="images/html.png">
-                    <img src="images/css.png">
-                    <img src="images/javascript.png">
-                    <img src="images/php.png">
-                    <img src="images/python.png">
-                    <img src="images/c++.png">
+                    <img src="icons/html.png" />
+                    <img src="icons/css.png" />
+                    <img src="icons/javascript.png" />
+                    <img src="icons/php.png" />
+                    <img src="icons/python.png" />
+                    <img src="icons/c++.png" />
                 </div>
-            </main>
-
-            <aside>
-                <img src="images/assabet_logo.jpg" />
-
-                <h1>Assabet Valley Regional Technical Highschool</h1>
-
-                <p>
-                    Assabet Valley Regional Technical High School is a dynamic
-                    and supportive school system that prepares students to meet
-                    the challenges of the future by providing a rigorous and
-                    relevant education in a safe and secure environment
-                    resulting in academic, career and technical proficiency.
-                </p>
-
-                <img src="images/assabet_school.jpg" />
-
-                <a href="http://assabet.org/" target="_blank">Learn More</a>
-            </aside>
-        </div>
-
-        <footer>
-            <div class="contact-container">
-                <a
-                    class="email"
-                    href="mailto:ryangrif875@gmail.com"
-                    target="_blank"
-                    ><img src="images/email.jpg"
-                /></a>
-                <a
-                    class="twitter"
-                    href="https://twitter.com/ryan_griffin45"
-                    target="_blank"
-                    ><img src="images/twitter.jpg"
-                /></a>
-                <a
-                    class="instagram"
-                    href="https://www.instagram.com/ryan_griffin45/"
-                    target="_blank"
-                    ><img src="images/instagram.jpg"
-                /></a>
-                <a
-                    class="discord"
-                    href="https://discordapp.com/users/6043/"
-                    target="_blank"
-                    ><img src="images/discord.jpg"
-                /></a>
-                <a
-                    class="github"
-                    href="https://github.com/ryan-griffin"
-                    target="_blank"
-                    ><img src="images/github.jpg"
-                /></a>
-                <a
-                    class="credly"
-                    href="https://www.credly.com/users/ryan-griffin.f79cdd37"
-                    target="_blank"
-                    ><img src="images/credly.jpg"
-                /></a>
             </div>
-            <p>
-                Resources:
-                <a href="https://www.w3schools.com/" target="_blank"
-                    >W3Schools</a
-                >,
-                <a href="https://stackoverflow.com/" target="_blank"
-                    >Stack Overflow</a
-                >,
-                <a href="https://css-tricks.com/" target="_blank">CSS Tricks</a>
-            </p>
-        </footer>
+        </section>
+
+        <section id="projects">
+            <div>
+                <h1>Projects</h1>
+            </div>
+            <div>
+                <button onclick="plusSlides(-1)"></button>
+                <div class="slide">
+                    <h2>Alice Game</h2>
+                    <img src="images/alice_game.jpg">
+                    <p>For this project I used the program alice to create a game. Alice uses block code to emulate Java. The character in the game is a turtle who has to eliminate all the aliens in order to win. The alien has a bow and arrow to kill the aliens with. the aliens kill the player with a melee attack. At the end of the game there is a large boss alien to kill, when the boss is killed you win the game. To make this game I leared how to add a movement system and colison. I created AI to make the aliens seek towards the player to attack. I designed the map also.</p>
+                </div>
+                <div class="slide">
+                    <h2>Unreal Engine Game</h2>
+                    <img src="images/unreal_engine_game.jpg">
+                    <p>For this project I learned about game development using unreal engine and I created a basic FPS game. I learned how to implement physics such as gravity and colison. I was able to create movement system with jumping and crouching. I created a health system that allows the player to take damage from the zombies when they attack. The zombies have a basic AI that makes them run towards the player when they see him. A gun is used to kill the zombies, it has an ammo counter and can reload. The player and zombies are complete with animations. I made the UI show all the useful infromaton needed such as ammo count, grenade count, health, objective, and the minimap. I also designed a map.</p>
+                </div>
+                <div class="slide">
+                    <h2>Python Calculator</h2>
+                    <img src="images/calculator.png">
+                    <p>I created a basic calculator using python. It includes the basic functions like adding, subtracting, multiplication and division.</p>
+                </div>
+                <div class="slide">
+                    <h2>Rice Memorial Baptist Church Website</h2>
+                    <img src="images/rice_church.png">
+                    <p>Website for the Rice Memorial Baptist Church in Northborough Massachusetts.</p>
+                </div>
+                <div class="slide">
+                    <h2>NTFW Website</h2>
+                    <img src="images/ntfw.png">
+                    <p>Website for the Tri County Strutters</p>
+                </div>
+                <button onclick="plusSlides(1)"></button>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <div>
+                <h1>Certifications</h1>
+            </div>
+        </section>
+
+        <section id="resume">
+            <div>
+                <h1>Resume</h1>
+            </div>
+            <div>
+                <iframe
+                    scrolling="no"
+                    src="https://docs.google.com/document/d/e/2PACX-1vShQkJjl8XQsh4geupPyB3EBvzNOJOf16HbY7rLpAQ7PfEQ2dM2GlZHevEa2ew_NRAX5HxfFr7a3M6T/pub?embedded=true"
+                ></iframe>
+            </div>
+        </section>
+        <script src="javascript.js"></script>
     </body>
 </html>
