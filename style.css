@@ -54,18 +54,27 @@ nav h2 {
 }
 
 .links {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 6px;
+    display: flex;
     padding: 6px;
     margin: auto;
 }
 
 .links a {
+    display: flex;
+    align-items: center;
     font-size: 20px;
     text-decoration: none;
-    padding: 14px 20px;
+    padding: 14px;
     border-radius: 6px;
+}
+
+.links a:not(:last-child) {
+    margin-right: 6px;
+}
+
+.links a img {
+    height: 20px;
+    margin-right: 10px;
 }
 
 .links a:hover {
@@ -320,10 +329,10 @@ iframe {
     }
 
     .links {
+        flex-direction: column;
         position: fixed;
         top: 0;
         left: 0;
-        grid-template-columns: auto;
         margin: 70px 0px 0px 10px;
         border-radius: 12px;
         background: linear-gradient(135deg, #000624, #260008);
@@ -333,6 +342,10 @@ iframe {
 
     .links a {
         padding: 12px 30px 12px 12px;
+    }
+    
+    .links a:not(:last-child) {
+        margin: 0px 0px 6px 0px;
     }
 
     #about div div img {
