@@ -260,7 +260,6 @@ iframe {
     border-radius: 20px;
     box-shadow: var(--boxshadow);
     background: white;
-    transform: scale(0.8);
 }
 
 @media (max-width: 1400px) {
@@ -285,6 +284,10 @@ iframe {
 
     section div:nth-child(1) {
         margin: 0px 0px 4vw 0px;
+    }
+
+    section > div:nth-child(2) {
+        margin-left: 0px;
     }
 
     #about div:nth-child(1) {
@@ -316,10 +319,6 @@ iframe {
 
     #resume div:nth-child(2) {
         margin: 0px;
-    }
-
-    iframe {
-        transform: scale(1);
     }
 }
 
