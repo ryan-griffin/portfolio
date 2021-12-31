@@ -56,6 +56,7 @@ nav h2 {
 .links {
     display: flex;
     padding: 6px;
+    gap: 6px;
     margin: auto;
 }
 
@@ -66,10 +67,6 @@ nav h2 {
     text-decoration: none;
     padding: 14px;
     border-radius: 6px;
-}
-
-.links a:not(:last-child) {
-    margin-right: 6px;
 }
 
 .links a img {
@@ -341,10 +338,6 @@ iframe {
 
     .links a {
         padding: 12px 30px 12px 12px;
-    }
-    
-    .links a:not(:last-child) {
-        margin: 0px 0px 6px 0px;
     }
 
     #about div div img {
