@@ -24,8 +24,7 @@ nav {
     align-items: center;
     width: 100%;
     height: 64px;
-    background: linear-gradient(135deg, #000624, #260008);
-    backdrop-filter: blur(50px);
+    background: linear-gradient(135deg, rgba(63, 94, 251, 0.15), rgba(252, 70, 107, 0.15)), black;
     position: fixed;
     top: 0;
     z-index: 1;
@@ -67,6 +66,7 @@ nav h2 {
     text-decoration: none;
     padding: 14px;
     border-radius: 6px;
+    transition: 0.1s;
 }
 
 .links a img {
@@ -75,7 +75,7 @@ nav h2 {
 }
 
 .links a:hover {
-    background-color: rgba(128, 128, 128, 0.15);
+    background: rgba(128, 128, 128, 0.1);
 }
 
 .socials {
@@ -99,7 +99,7 @@ section {
     margin-bottom: 1.5vh;
     padding: 0vw clamp(20px, 4vw, 999px);
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.82);
+    background: rgba(0, 0, 0, 0.82);
 }
 
 section div:nth-child(1) {
@@ -315,7 +315,7 @@ iframe {
         left: 0;
         margin: 70px 0px 0px 10px;
         border-radius: 12px;
-        background: linear-gradient(135deg, #000624, #260008);
+        background: linear-gradient(135deg, rgba(63, 94, 251, 0.15), rgba(252, 70, 107, 0.15)), black;
         transform: translateX(calc(-100% - 10px));
         transition: transform 0.25s;
     }
