@@ -1,8 +1,8 @@
-function show_hide() {
-    document.querySelector("nav").classList.toggle("show");
-}
+const show_hide = () => document.querySelector("nav").classList.toggle("show");
 
-var slideIndex = 1;
+const hide = () => document.querySelector("nav").classList.remove("show");
+
+let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -10,8 +10,8 @@ function plusSlides(n) {
 }
 
 function showSlides(n) {
-    var x;
-    var slides = document.getElementsByClassName("slide");
+    let x;
+    let slides = document.getElementsByClassName("slide");
     if (n > slides.length) {
         slideIndex = 1;
     }
@@ -24,7 +24,7 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "flex";
 }
 
-var slideIndex2 = 1;
+let slideIndex2 = 1;
 showSlides2(slideIndex2);
 
 function plusSlides2(n) {
@@ -32,8 +32,8 @@ function plusSlides2(n) {
 }
 
 function showSlides2(n) {
-    var y;
-    var slides2 = document.getElementsByClassName("slide2");
+    let y;
+    let slides2 = document.getElementsByClassName("slide2");
     if (n > slides2.length) {
         slideIndex2 = 1;
     }
