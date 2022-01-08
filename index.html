@@ -13,16 +13,16 @@
             <button onclick="show_hide()"></button>
             <h2>Portfolio</h2>
             <div class="links">
-                <a href="#about" onclick="hide()"
+                <a href="#about" onclick="hide(); reanimate(1);"
                     ><img src="icons/person.png" />About</a
                 >
-                <a href="#projects" onclick="hide()"
+                <a href="#projects" onclick="hide(); reanimate(2);"
                     ><img src="icons/code.png" />Projects</a
                 >
-                <a href="#certifications" onclick="hide()"
+                <a href="#certifications" onclick="hide(); reanimate(3);"
                     ><img src="icons/ribbon.png" />Certifications</a
                 >
-                <a href="#resume" onclick="hide()"
+                <a href="#resume" onclick="hide(); reanimate(4);"
                     ><img src="icons/document.png" />Resume</a
                 >
             </div>
@@ -40,7 +40,7 @@
                 /></a>
             </div>
         </nav>
-        <section id="about">
+        <section id="about" class="animate-about">
             <div>
                 <h2>Hello, my name is</h2>
                 <h1>Ryan Griffin</h1>
@@ -72,7 +72,7 @@
             </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="animate-projects">
             <div>
                 <h1>Projects</h1>
             </div>
@@ -107,7 +107,7 @@
                         player to take damage from the zombies when they attack.
                         The zombies have a basic AI that makes them run towards
                         the player when they see him. A gun is used to kill the
-                        zombies, it has an ammo counter and can reload. The
+                        zombies, it has an ammo counter and can reanimate. The
                         player and zombies are complete with animations. I made
                         the UI show all the useful infromaton needed such as
                         ammo count, grenade count, health, objective, and the
@@ -140,7 +140,7 @@
             </div>
         </section>
 
-        <section id="certifications">
+        <section id="certifications" class="animate-certifications">
             <div>
                 <h1>Certifications</h1>
             </div>
@@ -190,7 +190,7 @@
             </div>
         </section>
 
-        <section id="resume">
+        <section id="resume" class="animate-resume">
             <div>
                 <h1>Resume</h1>
             </div>

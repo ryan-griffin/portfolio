@@ -71,7 +71,7 @@ nav h2 {
     text-decoration: none;
     padding: 14px;
     border-radius: 6px;
-    transition: 0.1s;
+    transition: background-color 0.1s;
 }
 
 .links a img {
@@ -80,11 +80,11 @@ nav h2 {
 }
 
 .links a:hover {
-    background: rgba(128, 128, 128, 0.1);
+    background-color: rgba(128, 128, 128, 0.1);
 }
 
 .links a:active {
-    background: rgba(128, 128, 128, 0.08);
+    background-color: rgba(128, 128, 128, 0.08);
 }
 
 .socials {
@@ -109,7 +109,7 @@ section {
     padding-top: calc(clamp(20px, 4vw, 999px) + 64px);
     margin-bottom: 1vh;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.82);
+    background-color: rgba(0, 0, 0, 0.82);
 }
 
 section > div:nth-child(1) {
@@ -259,7 +259,7 @@ iframe {
     height: 700px;
     border: none;
     border-radius: 20px;
-    background: white;
+    background-color: white;
 }
 
 @media (max-width: 1400px) {
@@ -371,7 +371,7 @@ iframe {
 
 @keyframes move-right {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
         opacity: 0;
     }
 
@@ -380,15 +380,27 @@ iframe {
     }
 }
 
-section > div:nth-child(1),
-#about div:nth-child(1) > h2,
-#about div:nth-child(1) a {
+.animate-about div:nth-child(1),
+.animate-about div:nth-child(1) > h2,
+.animate-about div:nth-child(1) a {
+    animation: move-right 0.8s;
+}
+
+.animate-projects div:nth-child(1) {
+    animation: move-right 0.8s;
+}
+
+.animate-certifications div:nth-child(1) {
+    animation: move-right 0.8s;
+}
+
+.animate-resume div:nth-child(1) {
     animation: move-right 0.8s;
 }
 
 @keyframes move-left {
     0% {
-        transform: translateX(100%);
+        transform: translateX(50%);
         opacity: 0;
     }
 
@@ -397,8 +409,19 @@ section > div:nth-child(1),
     }
 }
 
-section > div:nth-child(2),
-#about div:nth-child(2) div {
+.animate-about div:nth-child(2) {
+    animation: move-left 0.8s;
+}
+
+.animate-projects div:nth-child(2) {
+    animation: move-left 0.8s;
+}
+
+.animate-certifications div:nth-child(2) {
+    animation: move-left 0.8s;
+}
+
+.animate-resume div:nth-child(2) {
     animation: move-left 0.8s;
 }
 
