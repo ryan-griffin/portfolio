@@ -29,7 +29,7 @@ nav {
             rgba(63, 94, 251, 0.15),
             rgba(252, 70, 107, 0.15)
         ),
-        black;
+        rgb(10, 10, 10);
     position: fixed;
     top: 0;
     z-index: 1;
@@ -109,7 +109,7 @@ section {
     padding-top: calc(clamp(20px, 4vw, 999px) + 64px);
     margin-bottom: 1vh;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.82);
+    background-color: rgba(0, 0, 0, 0.83);
 }
 
 section > div:nth-child(1) {
@@ -166,27 +166,94 @@ p {
 
 #about p {
     font-size: 22px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: rgba(128, 128, 128, 0.15);
 }
 
-#about div div {
+#skills > div:nth-child(2) {
+    display: grid;
+    grid-template-areas:
+        "skills-top skills-top skills-top"
+        ". . ."
+        ". . .";
+    gap: 10px;
+    width: 1200px;
+}
+
+.skills-top {
+    grid-area: skills-top;
+}
+
+#skills > div:nth-child(2) > div {
     display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 6px;
+    background-color: rgba(128, 128, 128, 0.15);
+}
+
+#skills > div:nth-child(2) > div > div {
+    display: grid;
+    grid-template-areas:
+        ". ."
+        "bar bar";
+    gap: 8px;
+    width: 250px;
+}
+
+.bar {
+    grid-area: bar;
+}
+
+#skills > div:nth-child(2) > div > div > div {
+    height: 10px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
 }
 
-#about div div img {
+#skills > div:nth-child(2) > div > div > div > div {
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(135deg, rgb(63, 94, 251), rgb(252, 70, 107));
+}
+
+#skills > div:nth-child(2) > div:nth-child(2) > div > div > div {
+    width: 100%;
+}
+
+#skills > div:nth-child(2) > div:nth-child(3) > div > div > div {
+    width: 95%;
+}
+
+#skills > div:nth-child(2) > div:nth-child(4) > div > div > div {
+    width: 70%;
+}
+
+#skills > div:nth-child(2) > div:nth-child(5) > div > div > div {
+    width: 30%;
+}
+
+#skills > div:nth-child(2) > div:nth-child(6) > div > div > div {
+    width: 70%;
+}
+
+#skills > div:nth-child(2) > div:nth-child(7) > div > div > div {
+    width: 30%;
+}
+
+#skills img {
     width: 80px;
 }
 
-#about div div img:not(:first-child):not(:last-child) {
-    margin: auto;
+#skills > div:nth-child(2) > div > div > p {
+    font-size: 22px;
 }
 
-#about div div img:first-child {
-    margin-right: auto;
-}
-
-#about div div img:last-child {
+#skills > div:nth-child(2) > div > div > p:nth-child(2) {
     margin-left: auto;
 }
 
@@ -195,6 +262,10 @@ p {
     display: flex;
     align-items: center;
     width: 100%;
+    background-color: rgba(128, 128, 128, 0.15);
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 100%;
 }
 
 section button {
@@ -258,7 +329,7 @@ iframe {
     width: 700px;
     height: 700px;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: white;
 }
 
@@ -290,7 +361,7 @@ iframe {
         margin-left: 0px;
     }
 
-    #about > div:nth-child(2) {
+    #about div:nth-child(2) {
         width: 100%;
     }
 
@@ -312,7 +383,7 @@ iframe {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
     nav button {
         display: flex;
     }
@@ -336,10 +407,6 @@ iframe {
 
     .links a {
         padding: 12px 30px 12px 12px;
-    }
-
-    #about div div img {
-        width: 50px;
     }
 
     #certifications h1 {
@@ -386,6 +453,10 @@ iframe {
     animation: move-right 0.8s;
 }
 
+.animate-skills > div:nth-child(1) {
+    animation: move-right 0.8s;
+}
+
 .animate-projects div:nth-child(1) {
     animation: move-right 0.8s;
 }
@@ -410,6 +481,10 @@ iframe {
 }
 
 .animate-about div:nth-child(2) {
+    animation: move-left 0.8s;
+}
+
+.animate-skills > div:nth-child(2) {
     animation: move-left 0.8s;
 }
 

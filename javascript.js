@@ -2,10 +2,12 @@ const show_hide = () => document.querySelector("nav").classList.toggle("show");
 const hide = () => document.querySelector("nav").classList.remove("show");
 
 const about = document.getElementById("about");
+const skills = document.getElementById("skills");
 const projects = document.getElementById("projects");
 const certifications = document.getElementById("certifications");
 const resume = document.getElementById("resume");
 const animate_about = () => about.classList.add("animate-about");
+const animate_skills = () => skills.classList.add("animate-skills");
 const animate_projects = () => projects.classList.add("animate-projects");
 const animate_certifications = () =>
     certifications.classList.add("animate-certifications");
@@ -15,12 +17,15 @@ function reanimate(section) {
         about.classList.remove("animate-about");
         setTimeout(animate_about);
     } else if (section == 2) {
+        skills.classList.remove("animate-skills");
+        setTimeout(animate_skills);
+    } else if (section == 3) {
         projects.classList.remove("animate-projects");
         setTimeout(animate_projects);
-    } else if (section == 3) {
+    } else if (section == 4) {
         certifications.classList.remove("animate-certifications");
         setTimeout(animate_certifications);
-    } else if (section == 4) {
+    } else if (section == 5) {
         resume.classList.remove("animate-resume");
         setTimeout(aniamte_resume);
     }
