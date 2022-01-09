@@ -104,7 +104,7 @@ nav h2 {
 section {
     display: flex;
     align-items: center;
-    min-height: calc(100vh - 8vw - 64px);
+    height: calc(100vh - 8vw - 64px);
     padding: clamp(20px, 4vw, 999px);
     padding-top: calc(clamp(20px, 4vw, 999px) + 64px);
     overflow: hidden;
@@ -120,7 +120,7 @@ section > div:nth-child(2) {
 }
 
 h1 {
-    font-size: clamp(90px, 10vw, 120px);
+    font-size: clamp(90px, 9vw, 140px);
     background: linear-gradient(135deg, rgb(63, 94, 251), rgb(252, 70, 107));
     background-clip: text;
     -webkit-background-clip: text;
@@ -128,7 +128,7 @@ h1 {
 }
 
 p {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 #about > div {
@@ -141,7 +141,7 @@ p {
 }
 
 #about h2 {
-    font-size: 30px;
+    font-size: 40px;
 }
 
 #about h1 {
@@ -159,7 +159,7 @@ p {
 }
 
 #about a img {
-    height: 30px;
+    height: 40px;
     margin-right: 10px;
 }
 
@@ -221,35 +221,37 @@ p {
 }
 
 #skills > div:nth-child(2) > div:nth-child(2) > div > div > div {
-    width: 100%;
+    --barfill: 100%;
+    width: var(--barfill);
 }
 
 #skills > div:nth-child(2) > div:nth-child(3) > div > div > div {
-    width: 95%;
+    --barfill: 95%;
+    width: var(--barfill);
 }
 
 #skills > div:nth-child(2) > div:nth-child(4) > div > div > div {
-    width: 70%;
+    --barfill: 60%;
+    width: var(--barfill);
 }
 
 #skills > div:nth-child(2) > div:nth-child(5) > div > div > div {
-    width: 30%;
+    --barfill: 30%;
+    width: var(--barfill);
 }
 
 #skills > div:nth-child(2) > div:nth-child(6) > div > div > div {
-    width: 70%;
+    --barfill: 60%;
+    width: var(--barfill);
 }
 
 #skills > div:nth-child(2) > div:nth-child(7) > div > div > div {
-    width: 30%;
+    --barfill: 30%;
+    width: var(--barfill);
 }
 
 #skills img {
     width: 80px;
-}
-
-#skills > div:nth-child(2) > div > div > p {
-    font-size: 22px;
 }
 
 #skills > div:nth-child(2) > div > div > p:nth-child(2) {
@@ -261,6 +263,7 @@ p {
     display: flex;
     align-items: center;
     width: 100%;
+    height: 100%;
     background-color: rgba(128, 128, 128, 0.15);
     border-radius: 10px;
     padding: 20px;
@@ -295,12 +298,13 @@ section button:active {
 #certifications div div {
     flex-direction: column;
     align-items: center;
-    animation: fade 1s;
+    animation: fade 0.8s;
 }
 
 #projects h2,
 #certifications h2 {
     font-size: 50px;
+    text-align: center;
 }
 
 #projects img {
@@ -347,6 +351,8 @@ iframe {
     section {
         flex-direction: column;
         align-items: flex-start;
+        height: auto;
+        min-height: calc(100vh - 8vw - 64px);
         padding: calc(clamp(20px, 4vw, 999px) + 64px) clamp(20px, 4vw, 999px)
             clamp(20px, 4vw, 999px) clamp(20px, 4vw, 999px);
     }
@@ -408,7 +414,7 @@ iframe {
     }
 
     #certifications h1 {
-        font-size: clamp(50px, 10vw, 120px);
+        font-size: clamp(50px, 9vw, 140px);
     }
 
     .show .links {
@@ -482,10 +488,6 @@ iframe {
     animation: move-left 0.8s;
 }
 
-.animate-skills > div:nth-child(2) {
-    animation: move-left 0.8s;
-}
-
 .animate-projects div:nth-child(2) {
     animation: move-left 0.8s;
 }
@@ -496,6 +498,59 @@ iframe {
 
 .animate-resume div:nth-child(2) {
     animation: move-left 0.8s;
+}
+
+@keyframes move-up {
+    0% {
+        transform: translateY(120px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animate-skills > div:nth-child(2) > div:nth-child(1) {
+    animation: move-up 0.8s;
+}
+
+.animate-skills > div:nth-child(2) > div:nth-child(2) {
+    animation: move-up 0.85s;
+}
+
+.animate-skills > div:nth-child(2) > div:nth-child(3) {
+    animation: move-up 0.85s;
+}
+
+.animate-skills > div:nth-child(2) > div:nth-child(4) {
+    animation: move-up 0.85s;
+}
+
+.animate-skills > div:nth-child(2) > div:nth-child(5) {
+    animation: move-up 0.9s;
+}
+
+.animate-skills > div:nth-child(2) > div:nth-child(6) {
+    animation: move-up 0.9s;
+}
+
+.animate-skills > div:nth-child(2) > div:nth-child(7) {
+    animation: move-up 0.9s;
+}
+
+@keyframes bar-fill {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: var(--barfill);
+    }
+}
+
+.animate-skills > div:nth-child(2) > div > div > div > div {
+    animation: bar-fill 0.8s;
 }
 
 @keyframes fade {
