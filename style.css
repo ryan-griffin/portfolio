@@ -25,9 +25,9 @@ nav {
     width: 100%;
     height: 64px;
     background: linear-gradient(
-            135deg,
+            90deg,
             rgba(63, 94, 251, 0.15),
-            rgba(252, 70, 107, 0.15)
+            rgba(228, 75, 126, 0.15)
         ),
         rgb(10, 10, 10);
     position: fixed;
@@ -104,10 +104,9 @@ nav h2 {
 section {
     display: flex;
     align-items: center;
-    height: calc(99vh - 8vw - 64px);
+    min-height: calc(100vh - 8vw - 64px);
     padding: clamp(20px, 4vw, 999px);
     padding-top: calc(clamp(20px, 4vw, 999px) + 64px);
-    margin-bottom: 1vh;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.83);
 }
@@ -265,7 +264,6 @@ p {
     background-color: rgba(128, 128, 128, 0.15);
     border-radius: 10px;
     padding: 20px;
-    min-height: 100%;
 }
 
 section button {
@@ -349,8 +347,8 @@ iframe {
     section {
         flex-direction: column;
         align-items: flex-start;
-        height: auto;
-        padding: calc(clamp(20px, 4vw, 999px) + 64px) clamp(20px, 4vw, 999px);
+        padding: calc(clamp(20px, 4vw, 999px) + 64px) clamp(20px, 4vw, 999px)
+            clamp(20px, 4vw, 999px) clamp(20px, 4vw, 999px);
     }
 
     section > div:nth-child(1) {
@@ -398,9 +396,9 @@ iframe {
         background: linear-gradient(
                 135deg,
                 rgba(63, 94, 251, 0.15),
-                rgba(252, 70, 107, 0.15)
+                rgba(228, 75, 126, 0.15)
             ),
-            black;
+            rgb(10, 10, 10);
         transform: translateX(calc(-100% - 10px));
         transition: transform 0.25s;
     }
