@@ -518,6 +518,10 @@ iframe {
     animation: move-left 0.8s;
 }
 
+.animate-skills > div:nth-child(2) {
+    animation: move-left 0.8s;
+}
+
 .animate-projects div:nth-child(2) {
     animation: move-left 0.8s;
 }
@@ -528,45 +532,6 @@ iframe {
 
 .animate-resume div:nth-child(2) {
     animation: move-left 0.8s;
-}
-
-@keyframes move-up {
-    0% {
-        transform: translateY(120px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.animate-skills > div:nth-child(2) > div:nth-child(1) {
-    animation: move-up 0.8s;
-}
-
-.animate-skills > div:nth-child(2) > div:nth-child(2) {
-    animation: move-up 0.85s;
-}
-
-.animate-skills > div:nth-child(2) > div:nth-child(3) {
-    animation: move-up 0.85s;
-}
-
-.animate-skills > div:nth-child(2) > div:nth-child(4) {
-    animation: move-up 0.85s;
-}
-
-.animate-skills > div:nth-child(2) > div:nth-child(5) {
-    animation: move-up 0.9s;
-}
-
-.animate-skills > div:nth-child(2) > div:nth-child(6) {
-    animation: move-up 0.9s;
-}
-
-.animate-skills > div:nth-child(2) > div:nth-child(7) {
-    animation: move-up 0.9s;
 }
 
 @keyframes bar-fill {
