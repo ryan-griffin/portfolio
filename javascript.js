@@ -6,30 +6,29 @@ const skills = document.getElementById("skills");
 const projects = document.getElementById("projects");
 const certifications = document.getElementById("certifications");
 const resume = document.getElementById("resume");
-const animate_about = () => about.classList.add("animate-about");
-const animate_skills = () => skills.classList.add("animate-skills");
-const animate_projects = () => projects.classList.add("animate-projects");
-const animate_certifications = () =>
-    certifications.classList.add("animate-certifications");
-const aniamte_resume = () => resume.classList.add("animate-resume");
-function reanimate(section) {
-    if (section == 1) {
-        about.classList.remove("animate-about");
-        setTimeout(animate_about);
-    } else if (section == 2) {
-        skills.classList.remove("animate-skills");
-        setTimeout(animate_skills);
-    } else if (section == 3) {
-        projects.classList.remove("animate-projects");
-        setTimeout(animate_projects);
-    } else if (section == 4) {
-        certifications.classList.remove("animate-certifications");
-        setTimeout(animate_certifications);
-    } else if (section == 5) {
-        resume.classList.remove("animate-resume");
-        setTimeout(aniamte_resume);
+document.addEventListener("scroll", () => {
+    const clientheight = document.documentElement.clientHeight;
+    const skillsY = skills.getBoundingClientRect().y;
+    const skillsheight = skills.getBoundingClientRect().height;
+    const projectsY = projects.getBoundingClientRect().y;
+    const projectsheight = projects.getBoundingClientRect().height;
+    const certificationsY = certifications.getBoundingClientRect().y;
+    const certificationsheight = certifications.getBoundingClientRect().height;
+    const resumeY = resume.getBoundingClientRect().y;
+    const resumeheight = resume.getBoundingClientRect().height;
+    if (clientheight > skillsY + (skillsheight * 2) / 3) {
+        skills.classList.add("animate-skills");
     }
-}
+    if (clientheight > projectsY + (projectsheight * 2) / 3) {
+        projects.classList.add("animate-projects");
+    }
+    if (clientheight > certificationsY + (certificationsheight * 2) / 3) {
+        certifications.classList.add("animate-certifications");
+    }
+    if (resumeheight > resumeY + (resumeheight * 2) / 3) {
+        resume.classList.add("animate-resume");
+    }
+});
 
 let slideIndex = 1;
 showSlides(slideIndex);

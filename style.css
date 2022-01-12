@@ -136,12 +136,24 @@ p {
     flex-direction: column;
 }
 
+#about > div:nth-child(1) {
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
 #about > div:nth-child(2) {
     width: 40vw;
+    transform: translateX(50%);
+    opacity: 0;
 }
 
 #about h2 {
     font-size: 40px;
+}
+
+#about div > h2 {
+    transform: translateX(-50%);
+    opacity: 0;
 }
 
 #about h1 {
@@ -152,6 +164,8 @@ p {
     display: flex;
     text-decoration: none;
     align-items: center;
+    transform: translateX(-50%);
+    opacity: 0;
 }
 
 #about div a:hover {
@@ -171,6 +185,11 @@ p {
     background-color: rgba(128, 128, 128, 0.15);
 }
 
+#skills > div:nth-child(1) {
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
 #skills > div:nth-child(2) {
     display: grid;
     grid-template-areas:
@@ -179,6 +198,8 @@ p {
         ". . .";
     gap: 10px;
     width: 1200px;
+    transform: translateX(50%);
+    opacity: 0;
 }
 
 .skills-top {
@@ -258,6 +279,16 @@ p {
     margin-left: auto;
 }
 
+#projects > div:nth-child(1) {
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+#certifications > div:nth-child(1) {
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
 #projects > div:nth-child(2),
 #certifications > div:nth-child(2) {
     display: flex;
@@ -267,6 +298,8 @@ p {
     background-color: rgba(128, 128, 128, 0.15);
     border-radius: 12px;
     padding: 20px;
+    transform: translateX(50%);
+    opacity: 0;
 }
 
 section button {
@@ -323,8 +356,15 @@ section button:active {
     margin: 40px 0px;
 }
 
+#resume div:nth-child(1) {
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
 #resume div:nth-child(2) {
     margin: auto;
+    transform: translateX(50%);
+    opacity: 0;
 }
 
 iframe {
@@ -471,67 +511,59 @@ iframe {
 }
 
 @keyframes move-right {
-    0% {
-        transform: translateX(-50%);
-        opacity: 0;
-    }
-
     100% {
         transform: translateX(0);
+        opacity: 100%;
     }
 }
 
 .animate-about div:nth-child(1),
-.animate-about div:nth-child(1) > h2,
-.animate-about div:nth-child(1) a {
-    animation: move-right 0.8s;
+.animate-about div > h2,
+.animate-about div a {
+    animation: move-right 0.8s forwards;
 }
 
 .animate-skills > div:nth-child(1) {
-    animation: move-right 0.8s;
+    animation: move-right 0.8s forwards;
 }
 
 .animate-projects div:nth-child(1) {
-    animation: move-right 0.8s;
+    animation: move-right 0.8s forwards;
 }
 
 .animate-certifications div:nth-child(1) {
-    animation: move-right 0.8s;
+    animation: move-right 0.8s forwards;
 }
 
 .animate-resume div:nth-child(1) {
-    animation: move-right 0.8s;
+    animation: move-right 0.8s forwards;
 }
 
 @keyframes move-left {
-    0% {
-        transform: translateX(50%);
-        opacity: 0;
-    }
-
     100% {
         transform: translateX(0);
+        opacity: 100%;
     }
 }
 
 .animate-about div:nth-child(2) {
-    animation: move-left 0.8s;
+    animation: move-left 0.8s forwards;
 }
 
 .animate-skills > div:nth-child(2) {
-    animation: move-left 0.8s;
+    animation: move-left 0.8s forwards;
 }
 
 .animate-projects div:nth-child(2) {
-    animation: move-left 0.8s;
+    animation: move-left 0.8s forwards;
 }
 
 .animate-certifications div:nth-child(2) {
-    animation: move-left 0.8s;
+    animation: move-left 0.8s forwards;
 }
 
 .animate-resume div:nth-child(2) {
-    animation: move-left 0.8s;
+    animation: move-left 0.8s forwards;
 }
 
 @keyframes bar-fill {
