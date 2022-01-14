@@ -22,7 +22,7 @@ document.addEventListener("scroll", () => {
     if (clientheight > projectsY + (projectsheight * 2) / 3) {
         projects.classList.add("animate-projects");
     }
-    if (clientheight > certificationsY + (certificationsheight * 2) / 3) {
+    if (clientheight > certificationsY + (certificationsheight * 1) / 2) {
         certifications.classList.add("animate-certifications");
     }
     if (resumeheight > resumeY + (resumeheight * 2) / 3) {

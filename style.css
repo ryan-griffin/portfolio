@@ -243,32 +243,32 @@ p {
 
 #skills > div:nth-child(2) > div:nth-child(2) > div > div > div {
     --barfill: 100%;
-    width: var(--barfill);
+    width: 0;
 }
 
 #skills > div:nth-child(2) > div:nth-child(3) > div > div > div {
     --barfill: 95%;
-    width: var(--barfill);
+    width: 0;
 }
 
 #skills > div:nth-child(2) > div:nth-child(4) > div > div > div {
     --barfill: 60%;
-    width: var(--barfill);
+    width: 0;
 }
 
 #skills > div:nth-child(2) > div:nth-child(5) > div > div > div {
     --barfill: 30%;
-    width: var(--barfill);
+    width: 0;
 }
 
 #skills > div:nth-child(2) > div:nth-child(6) > div > div > div {
     --barfill: 60%;
-    width: var(--barfill);
+    width: 0;
 }
 
 #skills > div:nth-child(2) > div:nth-child(7) > div > div > div {
     --barfill: 30%;
-    width: var(--barfill);
+    width: 0;
 }
 
 #skills img {
@@ -331,7 +331,7 @@ section button:active {
 #certifications div div {
     flex-direction: column;
     align-items: center;
-    animation: fade 0.8s;
+    animation: fade 1s;
 }
 
 #projects h2,
@@ -567,17 +567,13 @@ iframe {
 }
 
 @keyframes bar-fill {
-    0% {
-        width: 0;
-    }
-
     100% {
         width: var(--barfill);
     }
 }
 
 .animate-skills > div:nth-child(2) > div > div > div > div {
-    animation: bar-fill 0.8s;
+    animation: bar-fill 0.8s forwards 0.4s;
 }
 
 @keyframes fade {
