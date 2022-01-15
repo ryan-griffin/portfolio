@@ -1,67 +1,54 @@
-const show_hide = () => document.querySelector("nav").classList.toggle("show");
-const hide = () => document.querySelector("nav").classList.remove("show");
+show_hide = () => document.querySelector("nav").classList.toggle("show");
+hide = () => document.querySelector("nav").classList.remove("show");
 
-const about = document.getElementById("about");
-const skills = document.getElementById("skills");
-const projects = document.getElementById("projects");
-const certifications = document.getElementById("certifications");
-const resume = document.getElementById("resume");
+about = document.getElementById("about");
+skills = document.getElementById("skills");
+projects = document.getElementById("projects");
+certifications = document.getElementById("certifications");
+resume = document.getElementById("resume");
 document.addEventListener("scroll", () => {
-    const clientheight = document.documentElement.clientHeight;
-    const skillsY = skills.getBoundingClientRect().y;
-    const skillsheight = skills.getBoundingClientRect().height;
-    const projectsY = projects.getBoundingClientRect().y;
-    const projectsheight = projects.getBoundingClientRect().height;
-    const certificationsY = certifications.getBoundingClientRect().y;
-    const certificationsheight = certifications.getBoundingClientRect().height;
-    const resumeY = resume.getBoundingClientRect().y;
-    const resumeheight = resume.getBoundingClientRect().height;
-    if (clientheight > skillsY + (skillsheight * 2) / 3) {
+    clientheight = document.documentElement.clientHeight;
+    skillsY = skills.getBoundingClientRect().y;
+    skillsheight = skills.getBoundingClientRect().height;
+    projectsY = projects.getBoundingClientRect().y;
+    projectsheight = projects.getBoundingClientRect().height;
+    certificationsY = certifications.getBoundingClientRect().y;
+    certificationsheight = certifications.getBoundingClientRect().height;
+    resumeY = resume.getBoundingClientRect().y;
+    resumeheight = resume.getBoundingClientRect().height;
+    if (clientheight > skillsY + (skillsheight * 1) / 2) {
         skills.classList.add("animate-skills");
     }
-    if (clientheight > projectsY + (projectsheight * 2) / 3) {
+    if (clientheight > projectsY + (projectsheight * 1) / 2) {
         projects.classList.add("animate-projects");
     }
     if (clientheight > certificationsY + (certificationsheight * 1) / 2) {
         certifications.classList.add("animate-certifications");
     }
-    if (resumeheight > resumeY + (resumeheight * 2) / 3) {
+    if (resumeheight > resumeY + (resumeheight * 1) / 2) {
         resume.classList.add("animate-resume");
     }
 });
 
-let slideIndex = 1;
-showSlides(slideIndex);
-const plusSlides = (n) => showSlides((slideIndex += n));
-function showSlides(n) {
-    let x;
-    let slides = document.getElementsByClassName("slide");
-    if (n > slides.length) {
-        slideIndex = 1;
+slideIndex = showSlides(1, "slide");
+slideIndex2 = showSlides(1, "slide2");
+function plusSlides(index, num, slideclass) {
+    if (index == slideIndex) {
+        slideIndex = showSlides(index + num, slideclass);
+    } else if (index == slideIndex2) {
+        slideIndex2 = showSlides(index + num, slideclass);
     }
-    if (n < 1) {
-        slideIndex = slides.length;
-    }
-    for (x = 0; x < slides.length; x++) {
-        slides[x].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "flex";
 }
-
-let slideIndex2 = 1;
-showSlides2(slideIndex2);
-const plusSlides2 = (n) => showSlides2((slideIndex2 += n));
-function showSlides2(n) {
-    let y;
-    let slides2 = document.getElementsByClassName("slide2");
-    if (n > slides2.length) {
-        slideIndex2 = 1;
+function showSlides(index, slideclass) {
+    slides = document.getElementsByClassName(slideclass);
+    if (index > slides.length) {
+        index = 1;
+    } else if (index < 1) {
+        index = slides.length;
     }
-    if (n < 1) {
-        slideIndex2 = slides2.length;
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        slides[index - 1].style.display = "flex";
     }
-    for (y = 0; y < slides2.length; y++) {
-        slides2[y].style.display = "none";
-    }
-    slides2[slideIndex2 - 1].style.display = "flex";
+    return index;
 }
