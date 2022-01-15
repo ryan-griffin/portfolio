@@ -1,7 +1,6 @@
 show_hide = () => document.querySelector("nav").classList.toggle("show");
 hide = () => document.querySelector("nav").classList.remove("show");
 
-about = document.getElementById("about");
 skills = document.getElementById("skills");
 projects = document.getElementById("projects");
 certifications = document.getElementById("certifications");

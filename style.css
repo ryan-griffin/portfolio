@@ -157,7 +157,7 @@ p {
 }
 
 #about h1 {
-    margin: 20px 0px;
+    margin: clamp(20px, 4vw, 30px) 0px;
 }
 
 #about div a {
@@ -198,8 +198,6 @@ p {
         ". . .";
     gap: 10px;
     width: 1200px;
-    transform: translateX(50%);
-    opacity: 0;
 }
 
 .skills-top {
@@ -213,6 +211,8 @@ p {
     gap: 20px;
     border-radius: 6px;
     background-color: rgba(128, 128, 128, 0.15);
+    transform: translateX(400px);
+    opacity: 0;
 }
 
 #skills > div:nth-child(2) > div > div {
@@ -520,23 +520,23 @@ iframe {
 .animate-about div:nth-child(1),
 .animate-about div > h2,
 .animate-about div a {
-    animation: move-right 0.8s forwards;
+    animation: move-right 1s forwards;
 }
 
 .animate-skills > div:nth-child(1) {
-    animation: move-right 0.8s forwards;
+    animation: move-right 1s forwards;
 }
 
 .animate-projects div:nth-child(1) {
-    animation: move-right 0.8s forwards;
+    animation: move-right 1s forwards;
 }
 
 .animate-certifications div:nth-child(1) {
-    animation: move-right 0.8s forwards;
+    animation: move-right 1s forwards;
 }
 
 .animate-resume div:nth-child(1) {
-    animation: move-right 0.8s forwards;
+    animation: move-right 1s forwards;
 }
 
 @keyframes move-left {
@@ -547,23 +547,41 @@ iframe {
 }
 
 .animate-about div:nth-child(2) {
-    animation: move-left 0.8s forwards;
+    animation: move-left 1s forwards;
 }
 
-.animate-skills > div:nth-child(2) {
-    animation: move-left 0.8s forwards;
+.animate-skills > div:nth-child(2) > div:nth-child(1) {
+    animation: move-left 1s forwards;
+}
+.animate-skills > div:nth-child(2) > div:nth-child(2) {
+    animation: move-left 1s 0.05s forwards;
+}
+.animate-skills > div:nth-child(2) > div:nth-child(3) {
+    animation: move-left 1s 0.06s forwards;
+}
+.animate-skills > div:nth-child(2) > div:nth-child(4) {
+    animation: move-left 1s 0.07s forwards;
+}
+.animate-skills > div:nth-child(2) > div:nth-child(5) {
+    animation: move-left 1s 0.08s forwards;
+}
+.animate-skills > div:nth-child(2) > div:nth-child(6) {
+    animation: move-left 1s 0.09s forwards;
+}
+.animate-skills > div:nth-child(2) > div:nth-child(7) {
+    animation: move-left 1s 0.1s forwards;
 }
 
 .animate-projects div:nth-child(2) {
-    animation: move-left 0.8s forwards;
+    animation: move-left 1s forwards;
 }
 
 .animate-certifications div:nth-child(2) {
-    animation: move-left 0.8s forwards;
+    animation: move-left 1s forwards;
 }
 
 .animate-resume div:nth-child(2) {
-    animation: move-left 0.8s forwards;
+    animation: move-left 1s forwards;
 }
 
 @keyframes bar-fill {
@@ -572,8 +590,26 @@ iframe {
     }
 }
 
-.animate-skills > div:nth-child(2) > div > div > div > div {
-    animation: bar-fill 0.8s forwards 0.4s;
+.animate-skills > div:nth-child(2) > div > div > div > div:nth-child(1) {
+    animation: bar-fill 0.8s forwards 0.56s;
+}
+.animate-skills > div:nth-child(2) > div > div > div > div:nth-child(2) {
+    animation: bar-fill 0.8s forwards 0.57s;
+}
+.animate-skills > div:nth-child(2) > div > div > div > div:nth-child(3) {
+    animation: bar-fill 0.8s forwards 0.58s;
+}
+.animate-skills > div:nth-child(2) > div > div > div > div:nth-child(4) {
+    animation: bar-fill 0.8s forwards 0.59s;
+}
+.animate-skills > div:nth-child(2) > div > div > div > div:nth-child(4) {
+    animation: bar-fill 0.8s forwards 0.6s;
+}
+.animate-skills > div:nth-child(2) > div > div > div > div:nth-child(5) {
+    animation: bar-fill 0.8s forwards 0.61s;
+}
+.animate-skills > div:nth-child(2) > div > div > div > div:nth-child(6) {
+    animation: bar-fill 0.8s forwards 0.62s;
 }
 
 @keyframes fade {
