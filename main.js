@@ -1,20 +1,18 @@
 show_hide = () => document.querySelector("nav").classList.toggle("show");
 hide = () => document.querySelector("nav").classList.remove("show");
 
-skills = document.getElementById("skills");
-projects = document.getElementById("projects");
-certifications = document.getElementById("certifications");
-resume = document.getElementById("resume");
+const skills = document.getElementById("skills");
+const projects = document.getElementById("projects");
+const certifications = document.getElementById("certifications");
+const resume = document.getElementById("resume");
 document.addEventListener("scroll", () => {
-    clientheight = document.documentElement.clientHeight;
-    skillsY = skills.getBoundingClientRect().y;
-    skillsheight = skills.getBoundingClientRect().height;
-    projectsY = projects.getBoundingClientRect().y;
-    projectsheight = projects.getBoundingClientRect().height;
-    certificationsY = certifications.getBoundingClientRect().y;
-    certificationsheight = certifications.getBoundingClientRect().height;
-    resumeY = resume.getBoundingClientRect().y;
-    resumeheight = resume.getBoundingClientRect().height;
+    const clientheight = document.documentElement.clientHeight;
+    const skillsY = skills.getBoundingClientRect().y;
+    const skillsheight = skills.getBoundingClientRect().height;
+    const projectsY = projects.getBoundingClientRect().y;
+    const projectsheight = projects.getBoundingClientRect().height;
+    const certificationsY = certifications.getBoundingClientRect().y;
+    const certificationsheight = certifications.getBoundingClientRect().height;
     if (clientheight > skillsY + (skillsheight * 1) / 2) {
         skills.classList.add("animate-skills");
     }
@@ -24,13 +22,10 @@ document.addEventListener("scroll", () => {
     if (clientheight > certificationsY + (certificationsheight * 1) / 2) {
         certifications.classList.add("animate-certifications");
     }
-    if (resumeheight > resumeY + (resumeheight * 1) / 2) {
-        resume.classList.add("animate-resume");
-    }
 });
 
-slideIndex = showSlides(1, "slide");
-slideIndex2 = showSlides(1, "slide2");
+let slideIndex = showSlides(1, "slide");
+let slideIndex2 = showSlides(1, "slide2");
 function plusSlides(index, num, slideclass) {
     if (index == slideIndex) {
         slideIndex = showSlides(index + num, slideclass);

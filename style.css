@@ -241,34 +241,32 @@ p {
     background: linear-gradient(135deg, rgb(63, 94, 251), rgb(252, 70, 107));
 }
 
+#skills > div:nth-child(2) > div > div > div > div {
+    width: 0;
+}
+
 #skills > div:nth-child(2) > div:nth-child(2) > div > div > div {
     --barfill: 100%;
-    width: 0;
 }
 
 #skills > div:nth-child(2) > div:nth-child(3) > div > div > div {
     --barfill: 95%;
-    width: 0;
 }
 
 #skills > div:nth-child(2) > div:nth-child(4) > div > div > div {
-    --barfill: 60%;
-    width: 0;
+    --barfill: 75%;
 }
 
 #skills > div:nth-child(2) > div:nth-child(5) > div > div > div {
-    --barfill: 30%;
-    width: 0;
+    --barfill: 70%;
 }
 
 #skills > div:nth-child(2) > div:nth-child(6) > div > div > div {
-    --barfill: 60%;
-    width: 0;
+    --barfill: 75%;
 }
 
 #skills > div:nth-child(2) > div:nth-child(7) > div > div > div {
-    --barfill: 30%;
-    width: 0;
+    --barfill: 60%;
 }
 
 #skills img {
@@ -356,25 +354,6 @@ section button:active {
     margin: 40px 0px;
 }
 
-#resume div:nth-child(1) {
-    transform: translateX(-50%);
-    opacity: 0;
-}
-
-#resume div:nth-child(2) {
-    margin: auto;
-    transform: translateX(50%);
-    opacity: 0;
-}
-
-iframe {
-    width: 700px;
-    height: 700px;
-    border: none;
-    border-radius: 10px;
-    background-color: white;
-}
-
 @media (max-width: 1700px) {
     #skills > div:nth-child(2) {
         grid-template-areas:
@@ -439,10 +418,6 @@ iframe {
     #certifications > div:nth-child(2) {
         margin-left: 0px;
     }
-
-    #resume div:nth-child(2) {
-        margin: 0px;
-    }
 }
 
 @media (max-width: 900px) {
@@ -504,10 +479,6 @@ iframe {
         width: 100%;
         height: auto;
     }
-
-    iframe {
-        width: 89vw;
-    }
 }
 
 @keyframes move-right {
@@ -532,10 +503,6 @@ iframe {
 }
 
 .animate-certifications div:nth-child(1) {
-    animation: move-right 1s forwards;
-}
-
-.animate-resume div:nth-child(1) {
     animation: move-right 1s forwards;
 }
 
@@ -577,10 +544,6 @@ iframe {
 }
 
 .animate-certifications div:nth-child(2) {
-    animation: move-left 1s forwards;
-}
-
-.animate-resume div:nth-child(2) {
     animation: move-left 1s forwards;
 }
 

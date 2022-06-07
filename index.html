@@ -7,6 +7,7 @@
         <title>Portfolio</title>
         <link rel="shortcut icon" href="icons/favicon.png" />
         <link rel="stylesheet" href="style.css" />
+        <script src="main.js" defer></script>
     </head>
     <body>
         <nav>
@@ -24,9 +25,6 @@
                 >
                 <a href="#certifications" onclick="hide();"
                     ><img src="icons/ribbon.png" />Certifications</a
-                >
-                <a href="#resume" onclick="hide()"
-                    ><img src="icons/document.png" />Resume</a
                 >
             </div>
             <div class="socials">
@@ -101,7 +99,17 @@
                     <img src="icons/javascript.png" />
                     <div>
                         <p>Javascript</p>
-                        <p>60%</p>
+                        <p>75%</p>
+                        <div class="bar">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="icons/typescript.png" />
+                    <div>
+                        <p>Typescript</p>
+                        <p>70%</p>
                         <div class="bar">
                             <div></div>
                         </div>
@@ -111,27 +119,17 @@
                     <img src="icons/react.png" />
                     <div>
                         <p>React</p>
-                        <p>30%</p>
+                        <p>75%</p>
                         <div class="bar">
                             <div></div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <img src="icons/python.png" />
+                    <img src="icons/rust.png" />
                     <div>
-                        <p>Python</p>
+                        <p>Rust</p>
                         <p>60%</p>
-                        <div class="bar">
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="icons/c++.png" />
-                    <div>
-                        <p>C++</p>
-                        <p>30%</p>
                         <div class="bar">
                             <div></div>
                         </div>
@@ -258,17 +256,5 @@
                 <button onclick="plusSlides(slideIndex2, 1, 'slide2')"></button>
             </div>
         </section>
-
-        <section id="resume">
-            <div>
-                <h1>Resume</h1>
-            </div>
-            <div>
-                <iframe
-                    src="https://docs.google.com/document/d/e/2PACX-1vShQkJjl8XQsh4geupPyB3EBvzNOJOf16HbY7rLpAQ7PfEQ2dM2GlZHevEa2ew_NRAX5HxfFr7a3M6T/pub?embedded=true"
-                ></iframe>
-            </div>
-        </section>
-        <script src="javascript.js"></script>
     </body>
 </html>
