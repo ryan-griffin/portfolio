@@ -1,27 +1,26 @@
-show_hide = () => document.querySelector("nav").classList.toggle("show");
-hide = () => document.querySelector("nav").classList.remove("show");
+"use strict";
 
-const skills = document.getElementById("skills");
-const projects = document.getElementById("projects");
-const certifications = document.getElementById("certifications");
-const resume = document.getElementById("resume");
+const show_hide = () => document.querySelector("nav").classList.toggle("show");
+const hide = () => document.querySelector("nav").classList.remove("show");
+
 document.addEventListener("scroll", () => {
-    const clientheight = document.documentElement.clientHeight;
-    const skillsY = skills.getBoundingClientRect().y;
-    const skillsheight = skills.getBoundingClientRect().height;
-    const projectsY = projects.getBoundingClientRect().y;
-    const projectsheight = projects.getBoundingClientRect().height;
-    const certificationsY = certifications.getBoundingClientRect().y;
-    const certificationsheight = certifications.getBoundingClientRect().height;
-    if (clientheight > skillsY + (skillsheight * 1) / 2) {
-        skills.classList.add("animate-skills");
+    function anim(section, className) {
+        if (
+            document.documentElement.clientHeight >
+            section.getBoundingClientRect().y +
+                section.getBoundingClientRect().height / 2
+        ) {
+            section.classList.add(className);
+        }
     }
-    if (clientheight > projectsY + (projectsheight * 1) / 2) {
-        projects.classList.add("animate-projects");
-    }
-    if (clientheight > certificationsY + (certificationsheight * 1) / 2) {
-        certifications.classList.add("animate-certifications");
-    }
+
+    const skills = document.getElementById("skills");
+    const projects = document.getElementById("projects");
+    const certifications = document.getElementById("certifications");
+
+    anim(skills, "animate-skills");
+    anim(projects, "animate-projects");
+    anim(certifications, "animate-certifications");
 });
 
 let slideIndex = showSlides(1, "slide");
@@ -33,14 +32,15 @@ function plusSlides(index, num, slideclass) {
         slideIndex2 = showSlides(index + num, slideclass);
     }
 }
+
 function showSlides(index, slideclass) {
-    slides = document.getElementsByClassName(slideclass);
+    const slides = document.getElementsByClassName(slideclass);
     if (index > slides.length) {
         index = 1;
     } else if (index < 1) {
         index = slides.length;
     }
-    for (i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
         slides[index - 1].style.display = "flex";
     }
